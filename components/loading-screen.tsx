@@ -9,7 +9,7 @@ export function LoadingScreen({ onLoadingComplete }: { onLoadingComplete?: () =>
     const timer = setTimeout(() => {
       setIsLoading(false)
       onLoadingComplete?.()
-    }, 3000)
+    }, 1500)
 
     return () => clearTimeout(timer)
   }, [onLoadingComplete])
@@ -26,8 +26,8 @@ export function LoadingScreen({ onLoadingComplete }: { onLoadingComplete?: () =>
       
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-8">
-        {/* Glowing Title */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary glow-text text-center">
+        {/* Title */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary text-center">
           NexusRx Repurposing Studio
         </h1>
         
