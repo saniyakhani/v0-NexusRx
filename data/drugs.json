@@ -241,7 +241,10 @@
       { "disease": "Lower Respiratory Infections", "signalStrength": 0.90, "reason": "Effective against common respiratory pathogens" },
       { "disease": "Chlamydia", "signalStrength": 0.95, "reason": "First-line single-dose treatment" },
       { "disease": "COPD Exacerbation", "signalStrength": 0.75, "reason": "Treats bacterial triggers and reduces inflammation" },
-      { "disease": "Bronchiectasis", "signalStrength": 0.65, "reason": "Long-term prophylaxis reduces exacerbations" }
+      { "disease": "Bronchiectasis", "signalStrength": 0.65, "reason": "Long-term prophylaxis reduces exacerbations" },
+      { "disease": "Gonorrhea", "signalStrength": 0.88, "reason": "Used in combination with ceftriaxone for dual therapy treatment of gonorrhea" },
+      { "disease": "Pink Eye", "signalStrength": 0.82, "reason": "Effective against bacterial conjunctivitis, available as ophthalmic solution" },
+      { "disease": "Bronchitis", "signalStrength": 0.78, "reason": "Effective against bacterial causes of acute bronchitis" }
     ]
   },
   {
@@ -382,6 +385,272 @@
       { "disease": "Heart Failure", "signalStrength": 0.65, "reason": "Mild fluid management" },
       { "disease": "Kidney Stones", "signalStrength": 0.72, "reason": "Reduces calcium excretion, prevents calcium stones" },
       { "disease": "Osteoporosis", "signalStrength": 0.48, "reason": "May improve bone density through calcium retention" }
+    ]
+  },
+  {
+    "name": "Ceftriaxone",
+    "class": "Cephalosporin Antibiotic",
+    "commonUse": "Bacterial Infections",
+    "frequencyScore": 0.85,
+    "effects": ["bactericidal", "broad-spectrum coverage", "cell wall synthesis inhibition"],
+    "sideEffects": ["diarrhea", "rash", "injection site reactions", "biliary sludging"],
+    "contraindications": ["cephalosporin allergy", "neonates with hyperbilirubinemia"],
+    "repurposingSignals": [
+      { "disease": "Gonorrhea", "signalStrength": 0.95, "reason": "First-line treatment for uncomplicated gonorrhea, highly effective against Neisseria gonorrhoeae" },
+      { "disease": "Meningitis", "signalStrength": 0.92, "reason": "Excellent CNS penetration for bacterial meningitis" },
+      { "disease": "Pneumonia", "signalStrength": 0.85, "reason": "Effective against community-acquired pneumonia pathogens" }
+    ]
+  },
+  {
+    "name": "Isoniazid",
+    "class": "Antimycobacterial",
+    "commonUse": "Tuberculosis",
+    "frequencyScore": 0.65,
+    "effects": ["mycobactericidal", "cell wall synthesis inhibition", "mycolic acid synthesis blockade"],
+    "sideEffects": ["hepatotoxicity", "peripheral neuropathy", "rash"],
+    "contraindications": ["acute liver disease", "previous isoniazid hepatitis"],
+    "repurposingSignals": [
+      { "disease": "Tuberculosis", "signalStrength": 0.95, "reason": "First-line agent in TB treatment regimens, essential component of RIPE therapy" },
+      { "disease": "Latent TB Infection", "signalStrength": 0.90, "reason": "Standard prophylaxis for latent TB" }
+    ]
+  },
+  {
+    "name": "Rifampin",
+    "class": "Rifamycin Antibiotic",
+    "commonUse": "Tuberculosis",
+    "frequencyScore": 0.62,
+    "effects": ["RNA polymerase inhibition", "bactericidal", "mycobactericidal"],
+    "sideEffects": ["hepatotoxicity", "orange discoloration of body fluids", "drug interactions"],
+    "contraindications": ["concurrent protease inhibitor use", "severe liver disease"],
+    "repurposingSignals": [
+      { "disease": "Tuberculosis", "signalStrength": 0.95, "reason": "Essential first-line agent in multidrug TB therapy" },
+      { "disease": "Meningitis", "signalStrength": 0.75, "reason": "Prophylaxis for close contacts of meningococcal meningitis" },
+      { "disease": "Staphylococcal Infections", "signalStrength": 0.72, "reason": "Synergistic effect in combination therapy for resistant staph" }
+    ]
+  },
+  {
+    "name": "Pyrazinamide",
+    "class": "Antimycobacterial",
+    "commonUse": "Tuberculosis",
+    "frequencyScore": 0.55,
+    "effects": ["bactericidal in acidic pH", "intracellular mycobacteria killing", "sterilizing activity"],
+    "sideEffects": ["hepatotoxicity", "hyperuricemia", "arthralgias"],
+    "contraindications": ["severe liver disease", "acute gout"],
+    "repurposingSignals": [
+      { "disease": "Tuberculosis", "signalStrength": 0.92, "reason": "Key component of initial intensive phase TB treatment, shortens therapy duration" }
+    ]
+  },
+  {
+    "name": "Artemether-lumefantrine",
+    "class": "Antimalarial Combination",
+    "commonUse": "Malaria",
+    "frequencyScore": 0.45,
+    "effects": ["rapid parasite clearance", "artemisinin-based combination", "erythrocytic stage targeting"],
+    "sideEffects": ["headache", "dizziness", "QT prolongation", "abdominal pain"],
+    "contraindications": ["first trimester pregnancy", "severe malaria", "QT prolongation"],
+    "repurposingSignals": [
+      { "disease": "Malaria", "signalStrength": 0.95, "reason": "WHO-recommended first-line treatment for uncomplicated P. falciparum malaria" }
+    ]
+  },
+  {
+    "name": "Chloroquine",
+    "class": "Aminoquinoline Antimalarial",
+    "commonUse": "Malaria",
+    "frequencyScore": 0.48,
+    "effects": ["heme polymerization inhibition", "parasite killing", "anti-inflammatory"],
+    "sideEffects": ["retinopathy", "QT prolongation", "GI upset", "pruritus"],
+    "contraindications": ["retinal disease", "QT prolongation", "G6PD deficiency"],
+    "repurposingSignals": [
+      { "disease": "Malaria", "signalStrength": 0.85, "reason": "Effective for chloroquine-sensitive P. vivax and P. falciparum malaria" },
+      { "disease": "Rheumatoid Arthritis", "signalStrength": 0.65, "reason": "Disease-modifying properties through immune modulation" },
+      { "disease": "Lupus", "signalStrength": 0.72, "reason": "Reduces disease flares and organ damage in SLE" }
+    ]
+  },
+  {
+    "name": "Oseltamivir",
+    "class": "Neuraminidase Inhibitor",
+    "commonUse": "Influenza",
+    "frequencyScore": 0.72,
+    "effects": ["viral replication inhibition", "neuraminidase blockade", "symptom duration reduction"],
+    "sideEffects": ["nausea", "vomiting", "headache", "neuropsychiatric effects"],
+    "contraindications": ["severe renal impairment without dose adjustment"],
+    "repurposingSignals": [
+      { "disease": "Influenza", "signalStrength": 0.92, "reason": "First-line antiviral for influenza A and B, reduces illness duration and complications" },
+      { "disease": "COVID-19", "signalStrength": 0.25, "reason": "Limited efficacy, not recommended for COVID-19 treatment" }
+    ]
+  },
+  {
+    "name": "Zanamivir",
+    "class": "Neuraminidase Inhibitor",
+    "commonUse": "Influenza",
+    "frequencyScore": 0.55,
+    "effects": ["inhaled antiviral", "neuraminidase inhibition", "local respiratory tract action"],
+    "sideEffects": ["bronchospasm", "cough", "nasal symptoms"],
+    "contraindications": ["asthma", "COPD", "severe respiratory disease"],
+    "repurposingSignals": [
+      { "disease": "Influenza", "signalStrength": 0.88, "reason": "Inhaled neuraminidase inhibitor effective for influenza treatment and prophylaxis" }
+    ]
+  },
+  {
+    "name": "Paxlovid",
+    "class": "Protease Inhibitor Combination",
+    "commonUse": "COVID-19",
+    "frequencyScore": 0.68,
+    "effects": ["viral protease inhibition", "replication blockade", "nirmatrelvir-ritonavir combination"],
+    "sideEffects": ["dysgeusia", "diarrhea", "hypertension", "drug interactions"],
+    "contraindications": ["severe renal impairment", "severe liver impairment", "CYP3A-dependent drug interactions"],
+    "repurposingSignals": [
+      { "disease": "COVID-19", "signalStrength": 0.92, "reason": "FDA-authorized oral antiviral reducing hospitalization and death in high-risk patients" }
+    ]
+  },
+  {
+    "name": "Tenofovir",
+    "class": "Nucleotide Reverse Transcriptase Inhibitor",
+    "commonUse": "HIV/Hepatitis B",
+    "frequencyScore": 0.75,
+    "effects": ["viral DNA synthesis inhibition", "reverse transcriptase blockade", "HBV suppression"],
+    "sideEffects": ["nephrotoxicity", "bone density loss", "lactic acidosis"],
+    "contraindications": ["severe renal impairment", "concurrent nephrotoxic drugs"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis B", "signalStrength": 0.92, "reason": "First-line treatment for chronic HBV with high barrier to resistance" },
+      { "disease": "HIV", "signalStrength": 0.90, "reason": "Backbone of many antiretroviral regimens" }
+    ]
+  },
+  {
+    "name": "Entecavir",
+    "class": "Nucleoside Analogue",
+    "commonUse": "Hepatitis B",
+    "frequencyScore": 0.58,
+    "effects": ["HBV polymerase inhibition", "viral replication suppression", "liver protection"],
+    "sideEffects": ["headache", "fatigue", "dizziness", "lactic acidosis"],
+    "contraindications": ["HIV coinfection without antiretroviral therapy"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis B", "signalStrength": 0.95, "reason": "Preferred first-line therapy for chronic HBV, potent viral suppression with minimal resistance" }
+    ]
+  },
+  {
+    "name": "Epclusa",
+    "class": "NS5A/NS5B Inhibitor Combination",
+    "commonUse": "Hepatitis C",
+    "frequencyScore": 0.52,
+    "effects": ["pan-genotypic HCV activity", "viral replication blockade", "high cure rates"],
+    "sideEffects": ["headache", "fatigue", "nausea"],
+    "contraindications": ["severe bradycardia with amiodarone"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis C", "signalStrength": 0.95, "reason": "Pan-genotypic DAA combination with >95% cure rates across all HCV genotypes" }
+    ]
+  },
+  {
+    "name": "Harvoni",
+    "class": "NS5A/NS5B Inhibitor Combination",
+    "commonUse": "Hepatitis C",
+    "frequencyScore": 0.55,
+    "effects": ["HCV genotype 1 targeting", "ledipasvir-sofosbuvir combination", "sustained virologic response"],
+    "sideEffects": ["fatigue", "headache", "insomnia"],
+    "contraindications": ["severe bradycardia with amiodarone", "P-gp inducer coadministration"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis C", "signalStrength": 0.95, "reason": "First-line treatment for HCV genotype 1 with cure rates exceeding 95%" }
+    ]
+  },
+  {
+    "name": "Sovaldi",
+    "class": "NS5B Polymerase Inhibitor",
+    "commonUse": "Hepatitis C",
+    "frequencyScore": 0.48,
+    "effects": ["HCV RNA replication inhibition", "pan-genotypic activity", "viral clearance"],
+    "sideEffects": ["fatigue", "headache", "nausea", "insomnia"],
+    "contraindications": ["severe renal impairment", "amiodarone coadministration"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis C", "signalStrength": 0.92, "reason": "Backbone of many HCV regimens, revolutionary direct-acting antiviral" }
+    ]
+  },
+  {
+    "name": "Mavyret",
+    "class": "NS3/4A and NS5A Inhibitor Combination",
+    "commonUse": "Hepatitis C",
+    "frequencyScore": 0.52,
+    "effects": ["pan-genotypic coverage", "glecaprevir-pibrentasvir combination", "8-week treatment option"],
+    "sideEffects": ["headache", "fatigue", "nausea"],
+    "contraindications": ["severe liver disease", "Child-Pugh B/C cirrhosis"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis C", "signalStrength": 0.95, "reason": "Pan-genotypic 8-week regimen with excellent efficacy including prior treatment failures" }
+    ]
+  },
+  {
+    "name": "Sofosbuvir",
+    "class": "NS5B Polymerase Inhibitor",
+    "commonUse": "Hepatitis C",
+    "frequencyScore": 0.50,
+    "effects": ["chain terminator", "viral replication blockade", "high genetic barrier to resistance"],
+    "sideEffects": ["fatigue", "headache", "nausea"],
+    "contraindications": ["amiodarone use", "severe renal impairment"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis C", "signalStrength": 0.92, "reason": "Foundation of modern HCV therapy, used in multiple combination regimens" }
+    ]
+  },
+  {
+    "name": "Rebetol",
+    "class": "Nucleoside Analogue",
+    "commonUse": "Hepatitis C",
+    "frequencyScore": 0.42,
+    "effects": ["viral replication inhibition", "immune modulation", "combination therapy component"],
+    "sideEffects": ["hemolytic anemia", "fatigue", "rash", "teratogenicity"],
+    "contraindications": ["pregnancy", "severe cardiac disease", "hemoglobinopathies"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis C", "signalStrength": 0.75, "reason": "Adjunct to DAA therapy in difficult-to-treat cases, improves SVR rates" }
+    ]
+  },
+  {
+    "name": "Pibrentasvir",
+    "class": "NS5A Inhibitor",
+    "commonUse": "Hepatitis C",
+    "frequencyScore": 0.48,
+    "effects": ["NS5A protein inhibition", "pan-genotypic activity", "high resistance barrier"],
+    "sideEffects": ["headache", "fatigue"],
+    "contraindications": ["severe hepatic impairment"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis C", "signalStrength": 0.92, "reason": "Component of Mavyret, effective across all HCV genotypes including resistant strains" }
+    ]
+  },
+  {
+    "name": "Vosevi",
+    "class": "Triple DAA Combination",
+    "commonUse": "Hepatitis C",
+    "frequencyScore": 0.45,
+    "effects": ["NS5A, NS5B, and NS3/4A inhibition", "salvage therapy", "pan-genotypic"],
+    "sideEffects": ["headache", "fatigue", "diarrhea", "nausea"],
+    "contraindications": ["severe hepatic impairment", "moderate hepatic impairment for some genotypes"],
+    "repurposingSignals": [
+      { "disease": "Hepatitis C", "signalStrength": 0.92, "reason": "Triple combination for previously treated HCV patients, including those with NS5A resistance" }
+    ]
+  },
+  {
+    "name": "Cyclosporine",
+    "class": "Calcineurin Inhibitor",
+    "commonUse": "Transplant Rejection",
+    "frequencyScore": 0.65,
+    "effects": ["T-cell suppression", "calcineurin inhibition", "immunomodulation"],
+    "sideEffects": ["nephrotoxicity", "hypertension", "hirsutism", "gingival hyperplasia"],
+    "contraindications": ["uncontrolled hypertension", "malignancy", "severe renal dysfunction"],
+    "repurposingSignals": [
+      { "disease": "Psoriasis", "signalStrength": 0.88, "reason": "Highly effective for severe plaque psoriasis through T-cell suppression" },
+      { "disease": "Rheumatoid Arthritis", "signalStrength": 0.72, "reason": "Disease-modifying effects through immune suppression" },
+      { "disease": "Atopic Dermatitis", "signalStrength": 0.75, "reason": "Effective for severe refractory atopic dermatitis" }
+    ]
+  },
+  {
+    "name": "Methotrexate",
+    "class": "Antimetabolite/DMARD",
+    "commonUse": "Rheumatoid Arthritis",
+    "frequencyScore": 0.78,
+    "effects": ["folate antagonism", "anti-inflammatory", "immunomodulation", "cell proliferation inhibition"],
+    "sideEffects": ["hepatotoxicity", "bone marrow suppression", "mucositis", "pulmonary toxicity"],
+    "contraindications": ["pregnancy", "severe liver disease", "severe renal impairment", "immunodeficiency"],
+    "repurposingSignals": [
+      { "disease": "Psoriasis", "signalStrength": 0.90, "reason": "First-line systemic therapy for moderate-to-severe psoriasis, reduces skin cell proliferation" },
+      { "disease": "Rheumatoid Arthritis", "signalStrength": 0.92, "reason": "Anchor DMARD in RA treatment, slows disease progression" },
+      { "disease": "Cystic Fibrosis", "signalStrength": 0.35, "reason": "Investigational use for anti-inflammatory properties in CF lung disease" },
+      { "disease": "Crohn's Disease", "signalStrength": 0.72, "reason": "Maintenance therapy for Crohn's disease remission" }
     ]
   }
 ]
