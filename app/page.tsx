@@ -7,8 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { LoadingScreen } from "@/components/loading-screen"
-import { Beaker, Activity, ShieldAlert, User, Stethoscope, ArrowRight, Sparkles, Lock, Pill } from "lucide-react"
-import Image from "next/image"
+import { Pill, Beaker, Activity, ShieldAlert, User, Stethoscope, ArrowRight, Sparkles, Lock } from "lucide-react"
 
 export default function HomePage() {
   const [showLoading, setShowLoading] = useState(true)
@@ -20,28 +19,19 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Background image with lighter opacity and 69% reduced brightness */}
+      {/* Background image with 30% opacity */}
       <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
-        style={{ 
-          backgroundImage: "url('/images/prescription-bottles-bg.jpg')",
-          opacity: 0.2,
-          filter: "brightness(0.31)"
-        }}
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
+        style={{ backgroundImage: "url('/images/prescription-bottles-bg.jpg')" }}
       />
 
       <main className="relative z-10 max-w-7xl mx-auto px-4 py-12 space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6 pt-8">
           <div className="flex justify-center mb-6">
-            <Image 
-              src="/images/nexusrx-logo.png" 
-              alt="NexusRx Logo" 
-              width={100} 
-              height={100}
-              className="object-contain"
-              priority
-            />
+            <div className="p-4 bg-primary/10 rounded-full">
+              <Pill className="h-12 w-12 text-primary" />
+            </div>
           </div>
           <Badge variant="outline" className="text-primary border-primary/30">
             AI-Enabled Pharmaceutical Intelligence

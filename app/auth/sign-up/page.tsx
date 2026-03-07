@@ -9,8 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { AlertCircle, Loader2, User, Stethoscope } from "lucide-react"
-import Image from "next/image"
+import { AlertCircle, Loader2, Pill, User, Stethoscope } from "lucide-react"
 import type { UserRole } from "@/lib/auth-context"
 
 export default function SignUpPage() {
@@ -55,26 +54,18 @@ export default function SignUpPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      {/* Background image with lighter opacity and 69% reduced brightness */}
+      {/* Background image with 30% opacity */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: "url('/images/prescription-bottles-bg.jpg')",
-          opacity: 0.2,
-          filter: "brightness(0.31)"
-        }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: "url('/images/prescription-bottles-bg.jpg')" }}
       />
       
       <Card className="relative z-10 w-full max-w-md">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
-            <Image 
-              src="/images/nexusrx-logo.png" 
-              alt="NexusRx Logo" 
-              width={80} 
-              height={80}
-              className="object-contain"
-            />
+            <div className="p-3 bg-primary/10 rounded-full">
+              <Pill className="h-8 w-8 text-primary" />
+            </div>
           </div>
           <CardTitle className="text-2xl font-serif glow-text">Create Account</CardTitle>
           <CardDescription>Join NexusRx to explore drug repurposing</CardDescription>

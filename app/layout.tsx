@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Poppins, League_Spartan } from 'next/font/google'
+import { Poppins, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -9,10 +9,10 @@ const poppins = Poppins({
   variable: "--font-poppins"
 })
 
-const leagueSpartan = League_Spartan({ 
+const playfair = Playfair_Display({ 
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-league-spartan"
+  weight: ["600", "700"],
+  variable: "--font-playfair"
 })
 
 export const metadata: Metadata = {
@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${leagueSpartan.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

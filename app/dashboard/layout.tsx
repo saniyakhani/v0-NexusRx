@@ -4,9 +4,8 @@ import { useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { AuthProvider, useAuth } from "@/lib/auth-context"
 import { Button } from "@/components/ui/button"
-import { LogOut, User, Stethoscope } from "lucide-react"
+import { LogOut, Pill, User, Stethoscope } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 
 function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   const { user, profile, role, isLoading, signOut } = useAuth()
@@ -41,13 +40,9 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/dashboard" className="flex items-center gap-2">
-            <Image 
-              src="/images/nexusrx-logo.png" 
-              alt="NexusRx Logo" 
-              width={40} 
-              height={40}
-              className="object-contain"
-            />
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <Pill className="h-5 w-5 text-primary" />
+            </div>
             <span className="font-serif font-bold text-xl text-foreground">NexusRx</span>
           </Link>
           

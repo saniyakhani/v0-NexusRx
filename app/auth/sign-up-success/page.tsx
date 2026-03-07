@@ -1,33 +1,24 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle2, Mail } from "lucide-react"
+import { CheckCircle2, Mail, Pill } from "lucide-react"
 
 export default function SignUpSuccessPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      {/* Background image with lighter opacity and 69% reduced brightness */}
+      {/* Background image with 30% opacity */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: "url('/images/prescription-bottles-bg.jpg')",
-          opacity: 0.2,
-          filter: "brightness(0.31)"
-        }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: "url('/images/prescription-bottles-bg.jpg')" }}
       />
       
       <Card className="relative z-10 w-full max-w-md text-center">
         <CardHeader>
           <div className="flex justify-center mb-4">
             <div className="relative">
-              <Image 
-                src="/images/nexusrx-logo.png" 
-                alt="NexusRx Logo" 
-                width={80} 
-                height={80}
-                className="object-contain"
-              />
+              <div className="p-4 bg-primary/10 rounded-full">
+                <Pill className="h-10 w-10 text-primary" />
+              </div>
               <div className="absolute -bottom-1 -right-1 p-1 bg-background rounded-full">
                 <CheckCircle2 className="h-6 w-6 text-green-500" />
               </div>
