@@ -53,7 +53,7 @@ export default function LoginPage() {
               <Pill className="h-8 w-8 text-primary" />
             </div>
           </div>
-          <CardTitle className="text-2xl font-serif glow-text">Welcome Back</CardTitle>
+          <CardTitle className="text-2xl font-serif">Welcome Back</CardTitle>
           <CardDescription>Sign in to your NexusRx account</CardDescription>
         </CardHeader>
         <form onSubmit={handleLogin}>

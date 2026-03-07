@@ -125,33 +125,6 @@
   }
 }
 
-/* Glowing text effect */
-.glow-text {
-  text-shadow: 
-    0 0 10px oklch(0.45 0.12 145 / 0.8),
-    0 0 20px oklch(0.45 0.12 145 / 0.6),
-    0 0 30px oklch(0.45 0.12 145 / 0.4),
-    0 0 40px oklch(0.45 0.12 145 / 0.2);
-  animation: glow-pulse 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow-pulse {
-  from {
-    text-shadow: 
-      0 0 10px oklch(0.45 0.12 145 / 0.8),
-      0 0 20px oklch(0.45 0.12 145 / 0.6),
-      0 0 30px oklch(0.45 0.12 145 / 0.4),
-      0 0 40px oklch(0.45 0.12 145 / 0.2);
-  }
-  to {
-    text-shadow: 
-      0 0 15px oklch(0.55 0.12 145 / 1),
-      0 0 30px oklch(0.55 0.12 145 / 0.8),
-      0 0 45px oklch(0.55 0.12 145 / 0.6),
-      0 0 60px oklch(0.55 0.12 145 / 0.4);
-  }
-}
-
 /* Pyramid loader */
 .pyramid-loader {
   position: relative;

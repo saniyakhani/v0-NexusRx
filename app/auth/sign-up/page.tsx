@@ -49,7 +49,8 @@ export default function SignUpPage() {
       return
     }
 
-    router.push("/auth/sign-up-success")
+    router.push("/dashboard")
+    router.refresh()
   }
 
   return (
@@ -67,7 +68,7 @@ export default function SignUpPage() {
               <Pill className="h-8 w-8 text-primary" />
             </div>
           </div>
-          <CardTitle className="text-2xl font-serif glow-text">Create Account</CardTitle>
+          <CardTitle className="text-2xl font-serif">Create Account</CardTitle>
           <CardDescription>Join NexusRx to explore drug repurposing</CardDescription>
         </CardHeader>
         <form onSubmit={handleSignUp}>
