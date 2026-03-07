@@ -76,7 +76,7 @@
 
 @theme inline {
   --font-sans: var(--font-poppins), 'Poppins', sans-serif;
-  --font-serif: var(--font-playfair), 'Playfair Display', serif;
+  --font-serif: var(--font-league-spartan), 'League Spartan', sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
