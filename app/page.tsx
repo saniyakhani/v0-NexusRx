@@ -27,8 +27,8 @@ export default function HomePage() {
 
       <main className="relative z-10 max-w-7xl mx-auto px-4 py-12 space-y-16">
         {/* Hero Section */}
-        <section className="text-center space-y-6 pt-8">
-          <div className="flex justify-center mb-6">
+        <section className="space-y-6 pt-8">
+          <div className="flex justify-start mb-6">
             <div className="p-4 bg-primary/10 rounded-full">
               <Pill className="h-12 w-12 text-primary" />
             </div>
@@ -36,16 +36,16 @@ export default function HomePage() {
           <Badge variant="outline" className="text-primary border-primary/30">
             AI-Enabled Pharmaceutical Intelligence
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground font-serif tracking-tight text-balance glow-text">
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground font-serif tracking-tight text-balance">
             NexusRx Repurposing Studio
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
             Evaluate unconventional drug candidates for disease targets, analyze patient-specific applicability,
             and deliver OTC ingredient-matched alternatives in one clinical interface.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
             <Button size="lg" asChild className="w-full sm:w-auto">
               <Link href="/auth/sign-up">
                 Get Started
