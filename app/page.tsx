@@ -19,9 +19,9 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Background image with 30% opacity */}
+      {/* Background image with lower opacity */}
       <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-15 pointer-events-none"
         style={{ backgroundImage: "url('/images/prescription-bottles-bg.jpg')" }}
       />
 

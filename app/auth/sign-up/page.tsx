@@ -55,9 +55,9 @@ export default function SignUpPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      {/* Background image with 30% opacity */}
+      {/* Background image with lower opacity */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
         style={{ backgroundImage: "url('/images/prescription-bottles-bg.jpg')" }}
       />
       

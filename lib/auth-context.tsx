@@ -1,8 +1,9 @@
 "use client"
 
-import { createContext, useContext, useEffect, useState, useCallback } from "react"
+import { createContext, useContext, useEffect, useState, useCallback, useRef } from "react"
 import { createClient } from "@/lib/supabase/client"
 import type { User } from "@supabase/supabase-js"
+import type { SupabaseClient } from "@supabase/supabase-js"
 
 export type UserRole = "patient" | "provider"
 
@@ -29,9 +30,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [profile, setProfile] = useState<Profile | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  const supabase = createClient()
+  const supabaseRef = useRef<SupabaseClient | null>(null)
+
+  // Get or create Supabase client (only on client side)
+  const getSupabase = useCallback(() => {
+    if (!supabaseRef.current) {
+      supabaseRef.current = createClient()
+    }
+    return supabaseRef.current
+  }, [])
 
   const fetchProfile = useCallback(async (userId: string) => {
+    const supabase = getSupabase()
     const { data, error } = await supabase
       .from("profiles")
       .select("*")
@@ -43,7 +53,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       return null
     }
     return data as Profile
-  }, [supabase])
+  }, [getSupabase])
 
   const refreshProfile = useCallback(async () => {
     if (user) {
@@ -53,6 +63,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [user, fetchProfile])
 
   useEffect(() => {
+    const supabase = getSupabase()
+    
     const getInitialSession = async () => {
       const { data: { user } } = await supabase.auth.getUser()
       setUser(user)
@@ -83,9 +95,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     )
 
     return () => subscription.unsubscribe()
-  }, [supabase, fetchProfile])
+  }, [getSupabase, fetchProfile])
 
   const signOut = async () => {
+    const supabase = getSupabase()
     await supabase.auth.signOut()
     setUser(null)
     setProfile(null)
