@@ -104,12 +104,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setProfile(null)
   }
 
+  // Get role from profile first, then fallback to user metadata
+  const role = profile?.role ?? (user?.user_metadata?.role as UserRole) ?? null
+
   return (
     <AuthContext.Provider
       value={{
         user,
         profile,
-        role: profile?.role ?? null,
+        role,
         isLoading,
         signOut,
         refreshProfile,
