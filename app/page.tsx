@@ -121,20 +121,20 @@ export default function NexusRxPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative">
-      {/* Backdrop blur effect */}
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent pointer-events-none" />
+    <div className="min-h-screen bg-background relative">
+      {/* Subtle pattern overlay */}
+      <div className="fixed inset-0 opacity-30 pointer-events-none bg-[radial-gradient(circle_at_30%_20%,_oklch(0.55_0.10_145_/_0.1),_transparent_50%)]" />
 
       <main className="relative z-10 max-w-7xl mx-auto px-4 py-12 space-y-10">
         {/* Hero Section */}
-        <section className="text-center space-y-4 backdrop-blur-sm bg-white/5 rounded-2xl p-8 border border-white/10">
-          <p className="text-cyan-400 text-sm font-medium tracking-widest uppercase">
+        <section className="text-center space-y-4 bg-card rounded-2xl p-8 border border-border shadow-sm">
+          <p className="text-primary text-sm font-medium tracking-widest uppercase">
             AI-Enabled Pharmaceutical Intelligence
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white font-serif tracking-tight text-balance">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground font-serif tracking-tight text-balance">
             NexusRx Repurposing Studio
           </h1>
-          <p className="text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Evaluate unconventional drug candidates for disease targets, analyze patient-specific applicability,
             and deliver OTC ingredient-matched alternatives in one clinical interface.
           </p>
@@ -143,14 +143,14 @@ export default function NexusRxPage() {
         {/* Panel Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {/* Repurposing Analysis */}
-          <Card className="backdrop-blur-sm bg-white/5 border-white/10 text-white">
+          <Card className="bg-card border-border shadow-sm">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold">Provider: Repurposing Analysis</CardTitle>
+              <CardTitle className="text-xl font-semibold text-card-foreground">Provider: Repurposing Analysis</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <form onSubmit={handleRepurposing} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="repurposing-disease" className="text-slate-300">
+                  <Label htmlFor="repurposing-disease" className="text-muted-foreground">
                     Disease target
                   </Label>
                   <Input
@@ -159,19 +159,19 @@ export default function NexusRxPage() {
                     value={repurposingDisease}
                     onChange={(e) => setRepurposingDisease(e.target.value)}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-500"
+                    className="bg-input border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={repurposingLoading}
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   Analyze low-frequency use potential
                 </Button>
               </form>
               {repurposingOutput && (
-                <pre className="mt-4 p-4 bg-black/30 rounded-lg text-sm text-slate-300 overflow-auto max-h-64 whitespace-pre-wrap">
+                <pre className="mt-4 p-4 bg-muted rounded-lg text-sm text-foreground overflow-auto max-h-64 whitespace-pre-wrap">
                   {repurposingOutput}
                 </pre>
               )}
@@ -179,14 +179,14 @@ export default function NexusRxPage() {
           </Card>
 
           {/* Use-Case Effects */}
-          <Card className="backdrop-blur-sm bg-white/5 border-white/10 text-white">
+          <Card className="bg-card border-border shadow-sm">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold">Provider: Use-Case Effects</CardTitle>
+              <CardTitle className="text-xl font-semibold text-card-foreground">Provider: Use-Case Effects</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <form onSubmit={handleUseCase} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="usecase-condition" className="text-slate-300">
+                  <Label htmlFor="usecase-condition" className="text-muted-foreground">
                     Condition
                   </Label>
                   <Input
@@ -195,11 +195,11 @@ export default function NexusRxPage() {
                     value={useCaseCondition}
                     onChange={(e) => setUseCaseCondition(e.target.value)}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-500"
+                    className="bg-input border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="usecase-symptoms" className="text-slate-300">
+                  <Label htmlFor="usecase-symptoms" className="text-muted-foreground">
                     Symptoms (comma-separated)
                   </Label>
                   <Input
@@ -207,11 +207,11 @@ export default function NexusRxPage() {
                     placeholder="fatigue, pain, inflammation"
                     value={useCaseSymptoms}
                     onChange={(e) => setUseCaseSymptoms(e.target.value)}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-500"
+                    className="bg-input border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="usecase-comorbidities" className="text-slate-300">
+                  <Label htmlFor="usecase-comorbidities" className="text-muted-foreground">
                     Comorbidities (comma-separated)
                   </Label>
                   <Input
@@ -219,19 +219,19 @@ export default function NexusRxPage() {
                     placeholder="asthma, kidney disease"
                     value={useCaseComorbidities}
                     onChange={(e) => setUseCaseComorbidities(e.target.value)}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-500"
+                    className="bg-input border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={useCaseLoading}
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   Analyze applicability and effects
                 </Button>
               </form>
               {useCaseOutput && (
-                <pre className="mt-4 p-4 bg-black/30 rounded-lg text-sm text-slate-300 overflow-auto max-h-64 whitespace-pre-wrap">
+                <pre className="mt-4 p-4 bg-muted rounded-lg text-sm text-foreground overflow-auto max-h-64 whitespace-pre-wrap">
                   {useCaseOutput}
                 </pre>
               )}
@@ -239,14 +239,14 @@ export default function NexusRxPage() {
           </Card>
 
           {/* AI Patient Drug Decision */}
-          <Card className="backdrop-blur-sm bg-white/5 border-white/10 text-white">
+          <Card className="bg-card border-border shadow-sm">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold">Provider: AI Patient Drug Decision</CardTitle>
+              <CardTitle className="text-xl font-semibold text-card-foreground">Provider: AI Patient Drug Decision</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <form onSubmit={handleProviderDecision} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="provider-condition" className="text-slate-300">
+                  <Label htmlFor="provider-condition" className="text-muted-foreground">
                     Primary condition
                   </Label>
                   <Input
@@ -255,11 +255,11 @@ export default function NexusRxPage() {
                     value={providerCondition}
                     onChange={(e) => setProviderCondition(e.target.value)}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-500"
+                    className="bg-input border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="provider-symptoms" className="text-slate-300">
+                  <Label htmlFor="provider-symptoms" className="text-muted-foreground">
                     Symptoms (comma-separated)
                   </Label>
                   <Input
@@ -267,11 +267,11 @@ export default function NexusRxPage() {
                     placeholder="headache, nausea"
                     value={providerSymptoms}
                     onChange={(e) => setProviderSymptoms(e.target.value)}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-500"
+                    className="bg-input border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="provider-history" className="text-slate-300">
+                  <Label htmlFor="provider-history" className="text-muted-foreground">
                     Medical history (comma-separated)
                   </Label>
                   <Input
@@ -279,19 +279,19 @@ export default function NexusRxPage() {
                     placeholder="bradycardia, asthma"
                     value={providerHistory}
                     onChange={(e) => setProviderHistory(e.target.value)}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-500"
+                    className="bg-input border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={providerLoading}
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   Run AI applicability decision
                 </Button>
               </form>
               {providerOutput && (
-                <pre className="mt-4 p-4 bg-black/30 rounded-lg text-sm text-slate-300 overflow-auto max-h-64 whitespace-pre-wrap">
+                <pre className="mt-4 p-4 bg-muted rounded-lg text-sm text-foreground overflow-auto max-h-64 whitespace-pre-wrap">
                   {providerOutput}
                 </pre>
               )}
@@ -299,14 +299,14 @@ export default function NexusRxPage() {
           </Card>
 
           {/* OTC Alternative Matching */}
-          <Card className="backdrop-blur-sm bg-white/5 border-white/10 text-white">
+          <Card className="bg-card border-border shadow-sm">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold">Patient: OTC Alternative Matching</CardTitle>
+              <CardTitle className="text-xl font-semibold text-card-foreground">Patient: OTC Alternative Matching</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <form onSubmit={handlePatientOTC} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="patient-medication" className="text-slate-300">
+                  <Label htmlFor="patient-medication" className="text-muted-foreground">
                     Current medication (optional)
                   </Label>
                   <Input
@@ -314,11 +314,11 @@ export default function NexusRxPage() {
                     placeholder="e.g., Prescription anti-inflammatory"
                     value={patientMedication}
                     onChange={(e) => setPatientMedication(e.target.value)}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-500"
+                    className="bg-input border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="patient-symptoms" className="text-slate-300">
+                  <Label htmlFor="patient-symptoms" className="text-muted-foreground">
                     Symptoms (comma-separated)
                   </Label>
                   <Input
@@ -327,19 +327,19 @@ export default function NexusRxPage() {
                     value={patientSymptoms}
                     onChange={(e) => setPatientSymptoms(e.target.value)}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-500"
+                    className="bg-input border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={patientLoading}
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   Find OTC ingredient alternatives
                 </Button>
               </form>
               {patientOutput && (
-                <pre className="mt-4 p-4 bg-black/30 rounded-lg text-sm text-slate-300 overflow-auto max-h-64 whitespace-pre-wrap">
+                <pre className="mt-4 p-4 bg-muted rounded-lg text-sm text-foreground overflow-auto max-h-64 whitespace-pre-wrap">
                   {patientOutput}
                 </pre>
               )}
