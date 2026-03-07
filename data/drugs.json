@@ -1,0 +1,148 @@
+[
+  {
+    "name": "Metformin",
+    "class": "Biguanide",
+    "commonUse": "Type 2 Diabetes",
+    "frequencyScore": 0.85,
+    "effects": ["glucose regulation", "insulin sensitivity", "anti-inflammatory", "weight management"],
+    "sideEffects": ["nausea", "diarrhea", "vitamin B12 deficiency"],
+    "contraindications": ["kidney disease", "liver disease", "alcohol abuse"],
+    "repurposingSignals": [
+      {
+        "disease": "Fibromyalgia",
+        "signalStrength": 0.45,
+        "reason": "Anti-inflammatory properties may reduce systemic inflammation associated with fibromyalgia"
+      },
+      {
+        "disease": "PCOS",
+        "signalStrength": 0.82,
+        "reason": "Improves insulin resistance commonly seen in PCOS patients"
+      }
+    ]
+  },
+  {
+    "name": "Propranolol",
+    "class": "Beta Blocker",
+    "commonUse": "Hypertension",
+    "frequencyScore": 0.72,
+    "effects": ["heart rate reduction", "blood pressure control", "anxiety relief", "tremor reduction"],
+    "sideEffects": ["fatigue", "cold extremities", "sleep disturbances"],
+    "contraindications": ["asthma", "bradycardia", "heart block"],
+    "repurposingSignals": [
+      {
+        "disease": "Migraine",
+        "signalStrength": 0.78,
+        "reason": "Prevents migraine by stabilizing vascular tone and reducing sympathetic activity"
+      },
+      {
+        "disease": "Essential Tremor",
+        "signalStrength": 0.85,
+        "reason": "Beta-blockade reduces involuntary tremor amplitude"
+      }
+    ]
+  },
+  {
+    "name": "Amitriptyline",
+    "class": "Tricyclic Antidepressant",
+    "commonUse": "Depression",
+    "frequencyScore": 0.65,
+    "effects": ["pain modulation", "mood stabilization", "sleep improvement", "nerve signal blocking"],
+    "sideEffects": ["drowsiness", "dry mouth", "weight gain", "constipation"],
+    "contraindications": ["glaucoma", "urinary retention", "heart arrhythmia"],
+    "repurposingSignals": [
+      {
+        "disease": "Fibromyalgia",
+        "signalStrength": 0.75,
+        "reason": "Low-dose tricyclics modulate central pain processing and improve sleep quality"
+      },
+      {
+        "disease": "Neuropathic Pain",
+        "signalStrength": 0.82,
+        "reason": "Blocks reuptake of norepinephrine involved in pain transmission"
+      },
+      {
+        "disease": "Migraine",
+        "signalStrength": 0.68,
+        "reason": "Prophylactic effect through serotonin pathway modulation"
+      }
+    ]
+  },
+  {
+    "name": "Low-Dose Naltrexone",
+    "class": "Opioid Antagonist",
+    "commonUse": "Addiction Treatment",
+    "frequencyScore": 0.25,
+    "effects": ["immune modulation", "endorphin upregulation", "anti-inflammatory", "glial cell modulation"],
+    "sideEffects": ["vivid dreams", "mild headache", "insomnia"],
+    "contraindications": ["opioid dependence", "acute hepatitis", "liver failure"],
+    "repurposingSignals": [
+      {
+        "disease": "Fibromyalgia",
+        "signalStrength": 0.72,
+        "reason": "Modulates microglial activation and reduces central sensitization"
+      },
+      {
+        "disease": "Multiple Sclerosis",
+        "signalStrength": 0.58,
+        "reason": "Immune-modulating effects may reduce neuroinflammation"
+      },
+      {
+        "disease": "Crohn's Disease",
+        "signalStrength": 0.65,
+        "reason": "Anti-inflammatory action in gut mucosal tissue"
+      }
+    ]
+  },
+  {
+    "name": "Gabapentin",
+    "class": "Anticonvulsant",
+    "commonUse": "Epilepsy",
+    "frequencyScore": 0.78,
+    "effects": ["nerve stabilization", "pain relief", "anxiety reduction", "sleep improvement"],
+    "sideEffects": ["dizziness", "drowsiness", "peripheral edema"],
+    "contraindications": ["kidney disease", "respiratory depression"],
+    "repurposingSignals": [
+      {
+        "disease": "Fibromyalgia",
+        "signalStrength": 0.7,
+        "reason": "Reduces hyperexcitability of central nervous system pain pathways"
+      },
+      {
+        "disease": "Restless Leg Syndrome",
+        "signalStrength": 0.75,
+        "reason": "Modulates calcium channels involved in abnormal limb sensations"
+      },
+      {
+        "disease": "Neuroinflammation",
+        "signalStrength": 0.55,
+        "reason": "Indirect anti-inflammatory effects through neural pathway modulation"
+      }
+    ]
+  },
+  {
+    "name": "Doxycycline",
+    "class": "Tetracycline Antibiotic",
+    "commonUse": "Bacterial Infections",
+    "frequencyScore": 0.68,
+    "effects": ["anti-bacterial", "anti-inflammatory", "matrix metalloproteinase inhibition", "immunomodulatory"],
+    "sideEffects": ["photosensitivity", "nausea", "esophageal irritation"],
+    "contraindications": ["pregnancy", "children under 8", "liver disease"],
+    "repurposingSignals": [
+      {
+        "disease": "Rosacea",
+        "signalStrength": 0.88,
+        "reason": "Anti-inflammatory properties reduce facial redness and papules"
+      },
+      {
+        "disease": "Periodontitis",
+        "signalStrength": 0.72,
+        "reason": "Inhibits collagenase activity in gum tissue"
+      },
+      {
+        "disease": "Neuroinflammation",
+        "signalStrength": 0.48,
+        "reason": "Crosses blood-brain barrier and may reduce microglial activation"
+      }
+    ]
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "symptom": "pain",
+    "otc": [
+      {
+        "name": "Ibuprofen",
+        "ingredients": ["ibuprofen"],
+        "effects": ["pain relief", "anti-inflammatory", "fever reduction"]
+      },
+      {
+        "name": "Acetaminophen",
+        "ingredients": ["acetaminophen"],
+        "effects": ["pain relief", "fever reduction"]
+      },
+      {
+        "name": "Naproxen Sodium",
+        "ingredients": ["naproxen sodium"],
+        "effects": ["pain relief", "anti-inflammatory", "longer duration"]
+      }
+    ]
+  },
+  {
+    "symptom": "headache",
+    "otc": [
+      {
+        "name": "Excedrin Migraine",
+        "ingredients": ["acetaminophen", "aspirin", "caffeine"],
+        "effects": ["migraine relief", "pain relief", "alertness"]
+      },
+      {
+        "name": "Advil",
+        "ingredients": ["ibuprofen"],
+        "effects": ["headache relief", "anti-inflammatory"]
+      }
+    ]
+  },
+  {
+    "symptom": "allergy",
+    "otc": [
+      {
+        "name": "Cetirizine (Zyrtec)",
+        "ingredients": ["cetirizine hydrochloride"],
+        "effects": ["antihistamine", "allergy relief", "24-hour coverage"]
+      },
+      {
+        "name": "Loratadine (Claritin)",
+        "ingredients": ["loratadine"],
+        "effects": ["non-drowsy antihistamine", "allergy relief"]
+      },
+      {
+        "name": "Diphenhydramine (Benadryl)",
+        "ingredients": ["diphenhydramine"],
+        "effects": ["fast-acting antihistamine", "sleep aid", "allergy relief"]
+      }
+    ]
+  },
+  {
+    "symptom": "inflammation",
+    "otc": [
+      {
+        "name": "Ibuprofen",
+        "ingredients": ["ibuprofen"],
+        "effects": ["anti-inflammatory", "pain relief"]
+      },
+      {
+        "name": "Aspirin",
+        "ingredients": ["acetylsalicylic acid"],
+        "effects": ["anti-inflammatory", "blood thinner", "pain relief"]
+      }
+    ]
+  },
+  {
+    "symptom": "nausea",
+    "otc": [
+      {
+        "name": "Dramamine",
+        "ingredients": ["dimenhydrinate"],
+        "effects": ["motion sickness relief", "nausea reduction"]
+      },
+      {
+        "name": "Pepto-Bismol",
+        "ingredients": ["bismuth subsalicylate"],
+        "effects": ["nausea relief", "upset stomach", "diarrhea relief"]
+      }
+    ]
+  },
+  {
+    "symptom": "fatigue",
+    "otc": [
+      {
+        "name": "Caffeine Pills",
+        "ingredients": ["caffeine"],
+        "effects": ["alertness", "energy boost"]
+      },
+      {
+        "name": "Vitamin B12 Supplement",
+        "ingredients": ["cyanocobalamin", "methylcobalamin"],
+        "effects": ["energy metabolism", "fatigue reduction"]
+      }
+    ]
+  },
+  {
+    "symptom": "sleep",
+    "otc": [
+      {
+        "name": "Melatonin",
+        "ingredients": ["melatonin"],
+        "effects": ["sleep regulation", "circadian rhythm support"]
+      },
+      {
+        "name": "Diphenhydramine (ZzzQuil)",
+        "ingredients": ["diphenhydramine"],
+        "effects": ["drowsiness", "sleep aid"]
+      }
+    ]
+  },
+  {
+    "symptom": "congestion",
+    "otc": [
+      {
+        "name": "Pseudoephedrine (Sudafed)",
+        "ingredients": ["pseudoephedrine"],
+        "effects": ["nasal decongestant", "sinus relief"]
+      },
+      {
+        "name": "Phenylephrine",
+        "ingredients": ["phenylephrine"],
+        "effects": ["nasal decongestant"]
+      }
+    ]
+  }
+]
