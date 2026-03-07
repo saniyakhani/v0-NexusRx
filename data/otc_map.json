@@ -2,131 +2,363 @@
   {
     "symptom": "pain",
     "otc": [
-      {
-        "name": "Ibuprofen",
-        "ingredients": ["ibuprofen"],
-        "effects": ["pain relief", "anti-inflammatory", "fever reduction"]
-      },
-      {
-        "name": "Acetaminophen",
-        "ingredients": ["acetaminophen"],
-        "effects": ["pain relief", "fever reduction"]
-      },
-      {
-        "name": "Naproxen Sodium",
-        "ingredients": ["naproxen sodium"],
-        "effects": ["pain relief", "anti-inflammatory", "longer duration"]
-      }
+      { "name": "Ibuprofen (Advil, Motrin)", "ingredients": ["ibuprofen"], "effects": ["pain relief", "anti-inflammatory", "fever reduction"] },
+      { "name": "Acetaminophen (Tylenol)", "ingredients": ["acetaminophen"], "effects": ["pain relief", "fever reduction"] },
+      { "name": "Naproxen Sodium (Aleve)", "ingredients": ["naproxen sodium"], "effects": ["pain relief", "anti-inflammatory", "longer duration"] },
+      { "name": "Aspirin (Bayer)", "ingredients": ["acetylsalicylic acid"], "effects": ["pain relief", "anti-inflammatory", "blood thinner"] }
     ]
   },
   {
     "symptom": "headache",
     "otc": [
-      {
-        "name": "Excedrin Migraine",
-        "ingredients": ["acetaminophen", "aspirin", "caffeine"],
-        "effects": ["migraine relief", "pain relief", "alertness"]
-      },
-      {
-        "name": "Advil",
-        "ingredients": ["ibuprofen"],
-        "effects": ["headache relief", "anti-inflammatory"]
-      }
+      { "name": "Excedrin Migraine", "ingredients": ["acetaminophen", "aspirin", "caffeine"], "effects": ["migraine relief", "pain relief", "alertness"] },
+      { "name": "Advil Migraine", "ingredients": ["ibuprofen"], "effects": ["headache relief", "anti-inflammatory"] },
+      { "name": "Tylenol Extra Strength", "ingredients": ["acetaminophen"], "effects": ["headache relief", "fever reduction"] }
+    ]
+  },
+  {
+    "symptom": "migraine",
+    "otc": [
+      { "name": "Excedrin Migraine", "ingredients": ["acetaminophen", "aspirin", "caffeine"], "effects": ["migraine relief", "vasoconstriction", "pain relief"] },
+      { "name": "Advil Migraine", "ingredients": ["ibuprofen"], "effects": ["migraine relief", "anti-inflammatory"] }
     ]
   },
   {
     "symptom": "allergy",
     "otc": [
-      {
-        "name": "Cetirizine (Zyrtec)",
-        "ingredients": ["cetirizine hydrochloride"],
-        "effects": ["antihistamine", "allergy relief", "24-hour coverage"]
-      },
-      {
-        "name": "Loratadine (Claritin)",
-        "ingredients": ["loratadine"],
-        "effects": ["non-drowsy antihistamine", "allergy relief"]
-      },
-      {
-        "name": "Diphenhydramine (Benadryl)",
-        "ingredients": ["diphenhydramine"],
-        "effects": ["fast-acting antihistamine", "sleep aid", "allergy relief"]
-      }
+      { "name": "Cetirizine (Zyrtec)", "ingredients": ["cetirizine hydrochloride"], "effects": ["antihistamine", "allergy relief", "24-hour coverage"] },
+      { "name": "Loratadine (Claritin)", "ingredients": ["loratadine"], "effects": ["non-drowsy antihistamine", "allergy relief"] },
+      { "name": "Diphenhydramine (Benadryl)", "ingredients": ["diphenhydramine"], "effects": ["fast-acting antihistamine", "sleep aid", "allergy relief"] },
+      { "name": "Fexofenadine (Allegra)", "ingredients": ["fexofenadine"], "effects": ["non-drowsy antihistamine", "long-lasting relief"] }
     ]
   },
   {
     "symptom": "inflammation",
     "otc": [
-      {
-        "name": "Ibuprofen",
-        "ingredients": ["ibuprofen"],
-        "effects": ["anti-inflammatory", "pain relief"]
-      },
-      {
-        "name": "Aspirin",
-        "ingredients": ["acetylsalicylic acid"],
-        "effects": ["anti-inflammatory", "blood thinner", "pain relief"]
-      }
+      { "name": "Ibuprofen", "ingredients": ["ibuprofen"], "effects": ["anti-inflammatory", "pain relief"] },
+      { "name": "Aspirin", "ingredients": ["acetylsalicylic acid"], "effects": ["anti-inflammatory", "blood thinner", "pain relief"] },
+      { "name": "Naproxen Sodium", "ingredients": ["naproxen sodium"], "effects": ["anti-inflammatory", "joint pain relief"] }
     ]
   },
   {
     "symptom": "nausea",
     "otc": [
-      {
-        "name": "Dramamine",
-        "ingredients": ["dimenhydrinate"],
-        "effects": ["motion sickness relief", "nausea reduction"]
-      },
-      {
-        "name": "Pepto-Bismol",
-        "ingredients": ["bismuth subsalicylate"],
-        "effects": ["nausea relief", "upset stomach", "diarrhea relief"]
-      }
+      { "name": "Dramamine", "ingredients": ["dimenhydrinate"], "effects": ["motion sickness relief", "nausea reduction"] },
+      { "name": "Pepto-Bismol", "ingredients": ["bismuth subsalicylate"], "effects": ["nausea relief", "upset stomach", "diarrhea relief"] },
+      { "name": "Emetrol", "ingredients": ["phosphorated carbohydrate solution"], "effects": ["nausea relief", "stomach settling"] },
+      { "name": "Ginger Supplements", "ingredients": ["ginger root extract"], "effects": ["natural nausea relief", "digestive aid"] }
     ]
   },
   {
     "symptom": "fatigue",
     "otc": [
-      {
-        "name": "Caffeine Pills",
-        "ingredients": ["caffeine"],
-        "effects": ["alertness", "energy boost"]
-      },
-      {
-        "name": "Vitamin B12 Supplement",
-        "ingredients": ["cyanocobalamin", "methylcobalamin"],
-        "effects": ["energy metabolism", "fatigue reduction"]
-      }
+      { "name": "Caffeine Pills (NoDoz, Vivarin)", "ingredients": ["caffeine"], "effects": ["alertness", "energy boost"] },
+      { "name": "Vitamin B12 Supplement", "ingredients": ["cyanocobalamin", "methylcobalamin"], "effects": ["energy metabolism", "fatigue reduction"] },
+      { "name": "Iron Supplements", "ingredients": ["ferrous sulfate", "ferrous gluconate"], "effects": ["anemia correction", "energy improvement"] },
+      { "name": "Vitamin D Supplement", "ingredients": ["cholecalciferol"], "effects": ["fatigue reduction", "mood improvement"] }
     ]
   },
   {
     "symptom": "sleep",
     "otc": [
-      {
-        "name": "Melatonin",
-        "ingredients": ["melatonin"],
-        "effects": ["sleep regulation", "circadian rhythm support"]
-      },
-      {
-        "name": "Diphenhydramine (ZzzQuil)",
-        "ingredients": ["diphenhydramine"],
-        "effects": ["drowsiness", "sleep aid"]
-      }
+      { "name": "Melatonin", "ingredients": ["melatonin"], "effects": ["sleep regulation", "circadian rhythm support"] },
+      { "name": "Diphenhydramine (ZzzQuil, Unisom)", "ingredients": ["diphenhydramine"], "effects": ["drowsiness", "sleep aid"] },
+      { "name": "Doxylamine (Unisom SleepTabs)", "ingredients": ["doxylamine succinate"], "effects": ["sleep aid", "antihistamine"] },
+      { "name": "Valerian Root", "ingredients": ["valerian extract"], "effects": ["natural sleep aid", "relaxation"] }
+    ]
+  },
+  {
+    "symptom": "insomnia",
+    "otc": [
+      { "name": "Melatonin", "ingredients": ["melatonin"], "effects": ["sleep onset improvement", "circadian rhythm support"] },
+      { "name": "ZzzQuil", "ingredients": ["diphenhydramine"], "effects": ["sleep induction", "nighttime drowsiness"] },
+      { "name": "Unisom SleepTabs", "ingredients": ["doxylamine succinate"], "effects": ["sleep aid", "longer sleep duration"] }
     ]
   },
   {
     "symptom": "congestion",
     "otc": [
-      {
-        "name": "Pseudoephedrine (Sudafed)",
-        "ingredients": ["pseudoephedrine"],
-        "effects": ["nasal decongestant", "sinus relief"]
-      },
-      {
-        "name": "Phenylephrine",
-        "ingredients": ["phenylephrine"],
-        "effects": ["nasal decongestant"]
-      }
+      { "name": "Pseudoephedrine (Sudafed)", "ingredients": ["pseudoephedrine"], "effects": ["nasal decongestant", "sinus relief"] },
+      { "name": "Phenylephrine (Sudafed PE)", "ingredients": ["phenylephrine"], "effects": ["nasal decongestant"] },
+      { "name": "Oxymetazoline (Afrin)", "ingredients": ["oxymetazoline"], "effects": ["fast nasal decongestion", "12-hour relief"] },
+      { "name": "Saline Nasal Spray", "ingredients": ["sodium chloride"], "effects": ["moisturizing", "mucus loosening"] }
+    ]
+  },
+  {
+    "symptom": "cough",
+    "otc": [
+      { "name": "Dextromethorphan (Delsym, Robitussin DM)", "ingredients": ["dextromethorphan"], "effects": ["cough suppression"] },
+      { "name": "Guaifenesin (Mucinex)", "ingredients": ["guaifenesin"], "effects": ["expectorant", "mucus thinning"] },
+      { "name": "Honey-based Cough Drops", "ingredients": ["honey", "menthol"], "effects": ["throat soothing", "cough relief"] }
+    ]
+  },
+  {
+    "symptom": "sore throat",
+    "otc": [
+      { "name": "Chloraseptic Spray", "ingredients": ["phenol"], "effects": ["throat numbing", "pain relief"] },
+      { "name": "Cepacol Lozenges", "ingredients": ["benzocaine", "menthol"], "effects": ["throat numbing", "soothing"] },
+      { "name": "Throat Coat Tea", "ingredients": ["slippery elm", "licorice root"], "effects": ["throat coating", "soothing"] }
+    ]
+  },
+  {
+    "symptom": "heartburn",
+    "otc": [
+      { "name": "Tums", "ingredients": ["calcium carbonate"], "effects": ["acid neutralization", "fast relief"] },
+      { "name": "Pepcid (Famotidine)", "ingredients": ["famotidine"], "effects": ["acid reduction", "H2 blocker"] },
+      { "name": "Prilosec OTC", "ingredients": ["omeprazole"], "effects": ["acid suppression", "24-hour relief"] },
+      { "name": "Gaviscon", "ingredients": ["aluminum hydroxide", "magnesium carbonate"], "effects": ["acid neutralization", "foam barrier"] }
+    ]
+  },
+  {
+    "symptom": "acid reflux",
+    "otc": [
+      { "name": "Prilosec OTC", "ingredients": ["omeprazole"], "effects": ["proton pump inhibition", "acid suppression"] },
+      { "name": "Nexium 24HR", "ingredients": ["esomeprazole"], "effects": ["acid suppression", "healing"] },
+      { "name": "Pepcid Complete", "ingredients": ["famotidine", "calcium carbonate", "magnesium hydroxide"], "effects": ["acid reduction", "fast relief"] }
+    ]
+  },
+  {
+    "symptom": "diarrhea",
+    "otc": [
+      { "name": "Imodium (Loperamide)", "ingredients": ["loperamide"], "effects": ["slows intestinal movement", "diarrhea control"] },
+      { "name": "Pepto-Bismol", "ingredients": ["bismuth subsalicylate"], "effects": ["diarrhea relief", "upset stomach"] },
+      { "name": "Kaopectate", "ingredients": ["bismuth subsalicylate"], "effects": ["diarrhea relief", "stomach coating"] }
+    ]
+  },
+  {
+    "symptom": "constipation",
+    "otc": [
+      { "name": "Miralax", "ingredients": ["polyethylene glycol 3350"], "effects": ["osmotic laxative", "stool softening"] },
+      { "name": "Colace", "ingredients": ["docusate sodium"], "effects": ["stool softener"] },
+      { "name": "Senokot", "ingredients": ["sennosides"], "effects": ["stimulant laxative"] },
+      { "name": "Metamucil", "ingredients": ["psyllium husk"], "effects": ["fiber supplement", "bulk forming"] }
+    ]
+  },
+  {
+    "symptom": "gas",
+    "otc": [
+      { "name": "Gas-X (Simethicone)", "ingredients": ["simethicone"], "effects": ["gas relief", "bloating reduction"] },
+      { "name": "Beano", "ingredients": ["alpha-galactosidase"], "effects": ["gas prevention", "digestive enzyme"] }
+    ]
+  },
+  {
+    "symptom": "bloating",
+    "otc": [
+      { "name": "Gas-X", "ingredients": ["simethicone"], "effects": ["bloating relief", "gas dispersal"] },
+      { "name": "Peppermint Oil Capsules", "ingredients": ["peppermint oil"], "effects": ["digestive comfort", "bloating relief"] }
+    ]
+  },
+  {
+    "symptom": "fever",
+    "otc": [
+      { "name": "Acetaminophen (Tylenol)", "ingredients": ["acetaminophen"], "effects": ["fever reduction", "pain relief"] },
+      { "name": "Ibuprofen (Advil)", "ingredients": ["ibuprofen"], "effects": ["fever reduction", "anti-inflammatory"] },
+      { "name": "Aspirin", "ingredients": ["acetylsalicylic acid"], "effects": ["fever reduction", "anti-inflammatory"] }
+    ]
+  },
+  {
+    "symptom": "cold",
+    "otc": [
+      { "name": "DayQuil", "ingredients": ["acetaminophen", "dextromethorphan", "phenylephrine"], "effects": ["multi-symptom relief", "daytime formula"] },
+      { "name": "NyQuil", "ingredients": ["acetaminophen", "dextromethorphan", "doxylamine"], "effects": ["multi-symptom relief", "nighttime sleep"] },
+      { "name": "Zinc Lozenges", "ingredients": ["zinc gluconate"], "effects": ["cold duration reduction", "immune support"] },
+      { "name": "Vitamin C", "ingredients": ["ascorbic acid"], "effects": ["immune support", "antioxidant"] }
+    ]
+  },
+  {
+    "symptom": "flu",
+    "otc": [
+      { "name": "Theraflu", "ingredients": ["acetaminophen", "phenylephrine", "diphenhydramine"], "effects": ["flu symptom relief", "fever reduction"] },
+      { "name": "Oscillococcinum", "ingredients": ["homeopathic preparation"], "effects": ["flu symptom reduction"] },
+      { "name": "Elderberry Syrup", "ingredients": ["elderberry extract"], "effects": ["immune support", "flu duration reduction"] }
+    ]
+  },
+  {
+    "symptom": "muscle pain",
+    "otc": [
+      { "name": "Ibuprofen", "ingredients": ["ibuprofen"], "effects": ["muscle pain relief", "anti-inflammatory"] },
+      { "name": "Biofreeze", "ingredients": ["menthol"], "effects": ["topical pain relief", "cooling sensation"] },
+      { "name": "Icy Hot", "ingredients": ["menthol", "methyl salicylate"], "effects": ["topical pain relief", "warming/cooling"] },
+      { "name": "Aspercreme", "ingredients": ["lidocaine"], "effects": ["topical numbing", "pain relief"] }
+    ]
+  },
+  {
+    "symptom": "joint pain",
+    "otc": [
+      { "name": "Voltaren Gel", "ingredients": ["diclofenac"], "effects": ["topical anti-inflammatory", "joint pain relief"] },
+      { "name": "Glucosamine + Chondroitin", "ingredients": ["glucosamine sulfate", "chondroitin sulfate"], "effects": ["joint support", "cartilage health"] },
+      { "name": "Naproxen Sodium", "ingredients": ["naproxen sodium"], "effects": ["joint pain relief", "anti-inflammatory"] }
+    ]
+  },
+  {
+    "symptom": "back pain",
+    "otc": [
+      { "name": "Aleve", "ingredients": ["naproxen sodium"], "effects": ["back pain relief", "anti-inflammatory"] },
+      { "name": "ThermaCare Heat Wraps", "ingredients": ["iron powder heat cells"], "effects": ["heat therapy", "muscle relaxation"] },
+      { "name": "Salonpas Patches", "ingredients": ["menthol", "methyl salicylate"], "effects": ["topical pain relief"] }
+    ]
+  },
+  {
+    "symptom": "anxiety",
+    "otc": [
+      { "name": "L-Theanine", "ingredients": ["L-theanine"], "effects": ["relaxation", "stress reduction"] },
+      { "name": "Magnesium Supplement", "ingredients": ["magnesium glycinate"], "effects": ["relaxation", "muscle tension relief"] },
+      { "name": "Valerian Root", "ingredients": ["valerian extract"], "effects": ["calming", "stress relief"] },
+      { "name": "Chamomile Tea", "ingredients": ["chamomile extract"], "effects": ["relaxation", "mild sedation"] }
+    ]
+  },
+  {
+    "symptom": "stress",
+    "otc": [
+      { "name": "Ashwagandha", "ingredients": ["ashwagandha root extract"], "effects": ["adaptogenic", "stress reduction"] },
+      { "name": "B-Complex Vitamins", "ingredients": ["B vitamins"], "effects": ["stress support", "energy metabolism"] },
+      { "name": "Magnesium", "ingredients": ["magnesium"], "effects": ["muscle relaxation", "stress relief"] }
+    ]
+  },
+  {
+    "symptom": "dry eyes",
+    "otc": [
+      { "name": "Systane Ultra", "ingredients": ["polyethylene glycol", "propylene glycol"], "effects": ["eye lubrication", "dry eye relief"] },
+      { "name": "Refresh Tears", "ingredients": ["carboxymethylcellulose sodium"], "effects": ["artificial tears", "moisture"] },
+      { "name": "TheraTears", "ingredients": ["sodium carboxymethylcellulose"], "effects": ["dry eye relief", "electrolyte balance"] }
+    ]
+  },
+  {
+    "symptom": "itchy skin",
+    "otc": [
+      { "name": "Hydrocortisone Cream", "ingredients": ["hydrocortisone"], "effects": ["itch relief", "anti-inflammatory"] },
+      { "name": "Benadryl Cream", "ingredients": ["diphenhydramine"], "effects": ["itch relief", "antihistamine"] },
+      { "name": "Calamine Lotion", "ingredients": ["calamine", "zinc oxide"], "effects": ["itch relief", "skin soothing"] }
+    ]
+  },
+  {
+    "symptom": "rash",
+    "otc": [
+      { "name": "Hydrocortisone 1%", "ingredients": ["hydrocortisone"], "effects": ["rash relief", "anti-inflammatory"] },
+      { "name": "Aveeno Oatmeal Bath", "ingredients": ["colloidal oatmeal"], "effects": ["skin soothing", "itch relief"] },
+      { "name": "Calamine Lotion", "ingredients": ["calamine"], "effects": ["rash soothing", "drying"] }
+    ]
+  },
+  {
+    "symptom": "acne",
+    "otc": [
+      { "name": "Benzoyl Peroxide Wash", "ingredients": ["benzoyl peroxide"], "effects": ["acne treatment", "antibacterial"] },
+      { "name": "Salicylic Acid Cleanser", "ingredients": ["salicylic acid"], "effects": ["pore clearing", "exfoliation"] },
+      { "name": "Adapalene Gel (Differin)", "ingredients": ["adapalene"], "effects": ["retinoid treatment", "acne prevention"] }
+    ]
+  },
+  {
+    "symptom": "sunburn",
+    "otc": [
+      { "name": "Aloe Vera Gel", "ingredients": ["aloe vera"], "effects": ["cooling", "skin healing"] },
+      { "name": "Solarcaine", "ingredients": ["lidocaine"], "effects": ["pain relief", "numbing"] },
+      { "name": "Ibuprofen", "ingredients": ["ibuprofen"], "effects": ["inflammation reduction", "pain relief"] }
+    ]
+  },
+  {
+    "symptom": "dry skin",
+    "otc": [
+      { "name": "CeraVe Moisturizing Cream", "ingredients": ["ceramides", "hyaluronic acid"], "effects": ["deep moisturizing", "barrier repair"] },
+      { "name": "Eucerin Original Cream", "ingredients": ["petrolatum", "mineral oil"], "effects": ["intensive moisturizing"] },
+      { "name": "Aquaphor", "ingredients": ["petrolatum"], "effects": ["skin protection", "healing"] }
+    ]
+  },
+  {
+    "symptom": "motion sickness",
+    "otc": [
+      { "name": "Dramamine", "ingredients": ["dimenhydrinate"], "effects": ["motion sickness prevention", "nausea relief"] },
+      { "name": "Bonine", "ingredients": ["meclizine"], "effects": ["motion sickness relief", "less drowsy"] },
+      { "name": "Sea-Bands", "ingredients": ["acupressure"], "effects": ["nausea relief", "drug-free"] }
+    ]
+  },
+  {
+    "symptom": "high blood pressure",
+    "otc": [
+      { "name": "Omega-3 Fish Oil", "ingredients": ["EPA", "DHA"], "effects": ["mild BP reduction", "heart health"] },
+      { "name": "CoQ10", "ingredients": ["coenzyme Q10"], "effects": ["cardiovascular support", "mild BP effect"] },
+      { "name": "Magnesium", "ingredients": ["magnesium"], "effects": ["vascular relaxation", "BP support"] }
+    ]
+  },
+  {
+    "symptom": "high cholesterol",
+    "otc": [
+      { "name": "Red Yeast Rice", "ingredients": ["monacolin K"], "effects": ["cholesterol reduction", "statin-like"] },
+      { "name": "Plant Sterols/Stanols", "ingredients": ["plant sterols"], "effects": ["LDL reduction", "cholesterol blocking"] },
+      { "name": "Psyllium Fiber", "ingredients": ["psyllium husk"], "effects": ["cholesterol binding", "LDL reduction"] },
+      { "name": "Omega-3 Fish Oil", "ingredients": ["EPA", "DHA"], "effects": ["triglyceride reduction"] }
+    ]
+  },
+  {
+    "symptom": "weight loss",
+    "otc": [
+      { "name": "Alli (Orlistat)", "ingredients": ["orlistat"], "effects": ["fat absorption blocking", "weight loss"] },
+      { "name": "Green Tea Extract", "ingredients": ["EGCG", "caffeine"], "effects": ["metabolism boost", "fat oxidation"] },
+      { "name": "Glucomannan", "ingredients": ["konjac root fiber"], "effects": ["appetite suppression", "fullness"] }
+    ]
+  },
+  {
+    "symptom": "diabetes support",
+    "otc": [
+      { "name": "Cinnamon Extract", "ingredients": ["cinnamon bark extract"], "effects": ["blood sugar support", "insulin sensitivity"] },
+      { "name": "Berberine", "ingredients": ["berberine HCl"], "effects": ["glucose metabolism", "blood sugar support"] },
+      { "name": "Alpha-Lipoic Acid", "ingredients": ["alpha-lipoic acid"], "effects": ["antioxidant", "nerve health", "glucose metabolism"] },
+      { "name": "Chromium Picolinate", "ingredients": ["chromium"], "effects": ["insulin sensitivity", "blood sugar regulation"] }
+    ]
+  },
+  {
+    "symptom": "immune support",
+    "otc": [
+      { "name": "Vitamin C", "ingredients": ["ascorbic acid"], "effects": ["immune boost", "antioxidant"] },
+      { "name": "Vitamin D3", "ingredients": ["cholecalciferol"], "effects": ["immune regulation", "bone health"] },
+      { "name": "Zinc", "ingredients": ["zinc"], "effects": ["immune function", "wound healing"] },
+      { "name": "Elderberry", "ingredients": ["elderberry extract"], "effects": ["antiviral", "immune support"] }
+    ]
+  },
+  {
+    "symptom": "bone health",
+    "otc": [
+      { "name": "Calcium + Vitamin D", "ingredients": ["calcium carbonate", "vitamin D3"], "effects": ["bone strength", "calcium absorption"] },
+      { "name": "Vitamin K2", "ingredients": ["menaquinone"], "effects": ["calcium direction to bones", "bone density"] },
+      { "name": "Magnesium", "ingredients": ["magnesium"], "effects": ["bone formation", "calcium balance"] }
+    ]
+  },
+  {
+    "symptom": "urinary tract",
+    "otc": [
+      { "name": "Cranberry Supplements", "ingredients": ["cranberry extract", "proanthocyanidins"], "effects": ["UTI prevention", "urinary health"] },
+      { "name": "D-Mannose", "ingredients": ["D-mannose"], "effects": ["bacterial adhesion prevention", "UTI support"] },
+      { "name": "AZO Urinary Pain Relief", "ingredients": ["phenazopyridine"], "effects": ["urinary pain relief", "burning relief"] }
+    ]
+  },
+  {
+    "symptom": "prostate",
+    "otc": [
+      { "name": "Saw Palmetto", "ingredients": ["saw palmetto extract"], "effects": ["prostate health", "urinary flow"] },
+      { "name": "Beta-Sitosterol", "ingredients": ["beta-sitosterol"], "effects": ["prostate support", "urinary symptoms"] }
+    ]
+  },
+  {
+    "symptom": "menstrual cramps",
+    "otc": [
+      { "name": "Midol", "ingredients": ["acetaminophen", "caffeine", "pyrilamine"], "effects": ["cramp relief", "bloating reduction"] },
+      { "name": "Pamprin", "ingredients": ["acetaminophen", "pamabrom", "pyrilamine"], "effects": ["menstrual pain relief"] },
+      { "name": "Ibuprofen", "ingredients": ["ibuprofen"], "effects": ["prostaglandin inhibition", "cramp relief"] }
+    ]
+  },
+  {
+    "symptom": "menopause",
+    "otc": [
+      { "name": "Black Cohosh", "ingredients": ["black cohosh extract"], "effects": ["hot flash relief", "hormonal support"] },
+      { "name": "Estroven", "ingredients": ["soy isoflavones", "black cohosh"], "effects": ["menopause symptom relief"] },
+      { "name": "Evening Primrose Oil", "ingredients": ["gamma-linolenic acid"], "effects": ["hormonal balance", "skin health"] }
+    ]
+  },
+  {
+    "symptom": "erectile dysfunction",
+    "otc": [
+      { "name": "L-Arginine", "ingredients": ["L-arginine"], "effects": ["nitric oxide boost", "blood flow"] },
+      { "name": "Ginseng", "ingredients": ["panax ginseng"], "effects": ["energy", "circulation support"] },
+      { "name": "Yohimbe", "ingredients": ["yohimbine"], "effects": ["blood flow enhancement"] }
     ]
   }
 ]

@@ -6,62 +6,70 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
-import { AlertCircle, CheckCircle2, XCircle, Pill, Beaker, Activity, ShieldAlert } from "lucide-react"
+import { AlertCircle, CheckCircle2, AlertTriangle, Pill, Beaker, Activity, ShieldAlert } from "lucide-react"
 
-interface DrugCandidate {
+// Matches actual API response from /api/provider/repurposing
+interface RepurposingCandidate {
   drug: string
-  mechanism: string
-  evidenceLevel: string
-  rationale: string
+  knownPrimaryUse: string
+  disease: string
+  confidence: number
+  reason: string
+  signalStrength: number
+  noveltyScore: number
+  cautions: string[]
 }
 
 interface RepurposingResult {
   disease: string
-  candidates: DrugCandidate[]
+  results: RepurposingCandidate[]
 }
 
-interface UseCaseEffect {
+// Matches actual API response from /api/provider/use-case
+interface UseCaseAnalysis {
   drug: string
-  applicability: string
-  expectedEffects: string[]
-  sideEffectRisks: string[]
-  contraindicationFlags: string[]
+  class: string
+  fitScore: number
+  rationale: string
+  sideEffects: string[]
+  contraindicationsDetected: string[]
 }
 
 interface UseCaseResult {
   condition: string
-  effects: UseCaseEffect[]
+  analysis: UseCaseAnalysis[]
 }
 
-interface DrugDecision {
+// Matches actual API response from /api/provider/patient-drug-decision
+interface ProviderRecommendation {
   drug: string
-  decision: "recommended" | "caution" | "avoid"
-  reasoning: string
-  warnings: string[]
+  class: string
+  fitScore: number
+  rationale: string
+  sideEffects: string[]
+  contraindicationsDetected: string[]
+  recommendationLevel: string
 }
 
 interface ProviderResult {
   condition: string
-  patientFactors: {
-    symptoms: string[]
-    medicalHistory: string[]
-  }
-  decisions: DrugDecision[]
+  summary: string
+  recommendations: ProviderRecommendation[]
 }
 
-interface OTCMatch {
-  symptom: string
-  otcOptions: {
-    product: string
-    activeIngredient: string
-    mechanism: string
-    warnings: string[]
-  }[]
+// Matches actual API response from /api/patient/otc-alternatives
+interface OTCAlternative {
+  forSymptom: string
+  option: string
+  matchedIngredients: string[]
+  expectedEffects: string[]
 }
 
 interface PatientResult {
-  requestedSymptoms: string[]
-  matches: OTCMatch[]
+  currentMedication: string
+  matchedCount: number
+  alternatives: OTCAlternative[]
+  genericPlan: string[]
 }
 
 function splitCSV(value: string) {
@@ -248,23 +256,38 @@ export default function NexusRxPage() {
                     <Beaker className="w-4 h-4" />
                     <span>Results for <span className="font-medium text-foreground">{repurposingResult.disease}</span></span>
                   </div>
-                  {repurposingResult.candidates.map((candidate, idx) => (
-                    <div key={idx} className="p-4 bg-muted/50 border border-border rounded-lg space-y-2">
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-semibold text-foreground flex items-center gap-2">
-                          <Pill className="w-4 h-4 text-primary" />
-                          {candidate.drug}
-                        </h4>
-                        <Badge variant="secondary" className="text-xs">
-                          {candidate.evidenceLevel}
-                        </Badge>
+                  {repurposingResult.results && repurposingResult.results.length > 0 ? (
+                    repurposingResult.results.map((candidate, idx) => (
+                      <div key={idx} className="p-4 bg-muted/50 border border-border rounded-lg space-y-2">
+                        <div className="flex items-center justify-between">
+                          <h4 className="font-semibold text-foreground flex items-center gap-2">
+                            <Pill className="w-4 h-4 text-primary" />
+                            {candidate.drug}
+                          </h4>
+                          <Badge variant={candidate.confidence >= 70 ? "default" : "secondary"} className="text-xs">
+                            {candidate.confidence}% confidence
+                          </Badge>
+                        </div>
+                        <p className="text-sm text-muted-foreground">
+                          <span className="font-medium">Primary Use:</span> {candidate.knownPrimaryUse}
+                        </p>
+                        <p className="text-sm text-foreground">{candidate.reason}</p>
+                        {candidate.cautions.length > 0 && (
+                          <div className="flex flex-wrap gap-1 mt-2">
+                            {candidate.cautions.map((caution, i) => (
+                              <Badge key={i} variant="outline" className="text-xs bg-amber-500/10 text-amber-700 border-amber-500/20">
+                                {caution}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        <span className="font-medium">Mechanism:</span> {candidate.mechanism}
-                      </p>
-                      <p className="text-sm text-foreground">{candidate.rationale}</p>
+                    ))
+                  ) : (
+                    <div className="p-4 bg-muted/50 border border-border rounded-lg">
+                      <p className="text-sm text-muted-foreground">No repurposing candidates found for this disease. Try a different condition.</p>
                     </div>
-                  ))}
+                  )}
                 </div>
               )}
             </CardContent>
@@ -332,57 +355,55 @@ export default function NexusRxPage() {
                 <div className="mt-4 space-y-3">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Activity className="w-4 h-4" />
-                    <span>Effects for <span className="font-medium text-foreground">{useCaseResult.condition}</span></span>
+                    <span>Analysis for <span className="font-medium text-foreground">{useCaseResult.condition}</span></span>
                   </div>
-                  {useCaseResult.effects.map((effect, idx) => (
-                    <div key={idx} className="p-4 bg-muted/50 border border-border rounded-lg space-y-3">
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-semibold text-foreground flex items-center gap-2">
-                          <Pill className="w-4 h-4 text-primary" />
-                          {effect.drug}
-                        </h4>
-                        <Badge variant={effect.applicability === "High" ? "default" : "secondary"} className="text-xs">
-                          {effect.applicability} Applicability
-                        </Badge>
+                  {useCaseResult.analysis && useCaseResult.analysis.length > 0 ? (
+                    useCaseResult.analysis.map((item, idx) => (
+                      <div key={idx} className="p-4 bg-muted/50 border border-border rounded-lg space-y-3">
+                        <div className="flex items-center justify-between">
+                          <h4 className="font-semibold text-foreground flex items-center gap-2">
+                            <Pill className="w-4 h-4 text-primary" />
+                            {item.drug}
+                          </h4>
+                          <Badge variant={item.fitScore >= 70 ? "default" : "secondary"} className="text-xs">
+                            {item.fitScore}% fit
+                          </Badge>
+                        </div>
+                        <p className="text-sm text-muted-foreground">
+                          <span className="font-medium">Class:</span> {item.class}
+                        </p>
+                        <p className="text-sm text-foreground">{item.rationale}</p>
+                        {item.sideEffects.length > 0 && (
+                          <div>
+                            <p className="text-xs font-medium text-muted-foreground mb-1">Side Effects</p>
+                            <div className="flex flex-wrap gap-1">
+                              {item.sideEffects.map((effect, i) => (
+                                <Badge key={i} variant="outline" className="text-xs bg-amber-500/10 text-amber-700 border-amber-500/20">
+                                  {effect}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        {item.contraindicationsDetected.length > 0 && (
+                          <div>
+                            <p className="text-xs font-medium text-muted-foreground mb-1">Contraindications Detected</p>
+                            <div className="flex flex-wrap gap-1">
+                              {item.contraindicationsDetected.map((flag, i) => (
+                                <Badge key={i} variant="outline" className="text-xs bg-destructive/10 text-destructive border-destructive/20">
+                                  {flag}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
-                      {effect.expectedEffects.length > 0 && (
-                        <div>
-                          <p className="text-xs font-medium text-muted-foreground mb-1">Expected Effects</p>
-                          <div className="flex flex-wrap gap-1">
-                            {effect.expectedEffects.map((eff, i) => (
-                              <Badge key={i} variant="outline" className="text-xs bg-primary/10 text-primary border-primary/20">
-                                {eff}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                      {effect.sideEffectRisks.length > 0 && (
-                        <div>
-                          <p className="text-xs font-medium text-muted-foreground mb-1">Side Effect Risks</p>
-                          <div className="flex flex-wrap gap-1">
-                            {effect.sideEffectRisks.map((risk, i) => (
-                              <Badge key={i} variant="outline" className="text-xs bg-amber-500/10 text-amber-700 border-amber-500/20">
-                                {risk}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                      {effect.contraindicationFlags.length > 0 && (
-                        <div>
-                          <p className="text-xs font-medium text-muted-foreground mb-1">Contraindications</p>
-                          <div className="flex flex-wrap gap-1">
-                            {effect.contraindicationFlags.map((flag, i) => (
-                              <Badge key={i} variant="outline" className="text-xs bg-destructive/10 text-destructive border-destructive/20">
-                                {flag}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                    ))
+                  ) : (
+                    <div className="p-4 bg-muted/50 border border-border rounded-lg">
+                      <p className="text-sm text-muted-foreground">No applicable drugs found for this condition.</p>
                     </div>
-                  ))}
+                  )}
                 </div>
               )}
             </CardContent>
@@ -452,54 +473,67 @@ export default function NexusRxPage() {
                     <ShieldAlert className="w-4 h-4" />
                     <span>Decisions for <span className="font-medium text-foreground">{providerResult.condition}</span></span>
                   </div>
-                  {providerResult.patientFactors && (
+                  {providerResult.summary && (
                     <div className="p-3 bg-secondary/50 rounded-lg text-sm">
-                      <p className="text-muted-foreground">
-                        <span className="font-medium">Patient factors:</span>{" "}
-                        {[...providerResult.patientFactors.symptoms, ...providerResult.patientFactors.medicalHistory].join(", ") || "None specified"}
-                      </p>
+                      <p className="text-muted-foreground">{providerResult.summary}</p>
                     </div>
                   )}
-                  {providerResult.decisions.map((decision, idx) => (
-                    <div key={idx} className="p-4 bg-muted/50 border border-border rounded-lg space-y-2">
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-semibold text-foreground flex items-center gap-2">
-                          <Pill className="w-4 h-4 text-primary" />
-                          {decision.drug}
-                        </h4>
-                        <Badge 
-                          className={`text-xs ${
-                            decision.decision === "recommended" 
-                              ? "bg-primary/20 text-primary border-primary/30" 
-                              : decision.decision === "caution" 
-                                ? "bg-amber-500/20 text-amber-700 border-amber-500/30" 
-                                : "bg-destructive/20 text-destructive border-destructive/30"
-                          }`}
-                        >
-                          <span className="flex items-center gap-1">
-                            {decision.decision === "recommended" ? (
-                              <CheckCircle2 className="w-3 h-3" />
-                            ) : decision.decision === "caution" ? (
-                              <AlertCircle className="w-3 h-3" />
-                            ) : (
-                              <XCircle className="w-3 h-3" />
-                            )}
-                            {decision.decision.charAt(0).toUpperCase() + decision.decision.slice(1)}
-                          </span>
-                        </Badge>
-                      </div>
-                      <p className="text-sm text-foreground">{decision.reasoning}</p>
-                      {decision.warnings.length > 0 && (
-                        <div className="flex flex-wrap gap-1 mt-2">
-                          {decision.warnings.map((warning, i) => (
-                            <Badge key={i} variant="outline" className="text-xs bg-amber-500/10 text-amber-700 border-amber-500/20">
-                              {warning}
-                            </Badge>
-                          ))}
+                  {providerResult.recommendations && providerResult.recommendations.length > 0 ? (
+                    providerResult.recommendations.map((rec, idx) => (
+                      <div key={idx} className="p-4 bg-muted/50 border border-border rounded-lg space-y-2">
+                        <div className="flex items-center justify-between">
+                          <h4 className="font-semibold text-foreground flex items-center gap-2">
+                            <Pill className="w-4 h-4 text-primary" />
+                            {rec.drug}
+                          </h4>
+                          <Badge 
+                            className={`text-xs ${
+                              rec.fitScore >= 75 
+                                ? "bg-primary/20 text-primary border-primary/30" 
+                                : rec.fitScore >= 55 
+                                  ? "bg-amber-500/20 text-amber-700 border-amber-500/30" 
+                                  : "bg-muted text-muted-foreground border-border"
+                            }`}
+                          >
+                            <span className="flex items-center gap-1">
+                              {rec.fitScore >= 75 ? (
+                                <CheckCircle2 className="w-3 h-3" />
+                              ) : rec.fitScore >= 55 ? (
+                                <AlertTriangle className="w-3 h-3" />
+                              ) : (
+                                <AlertCircle className="w-3 h-3" />
+                              )}
+                              {rec.fitScore}% fit
+                            </span>
+                          </Badge>
                         </div>
-                      )}
+                        <p className="text-xs text-muted-foreground">{rec.recommendationLevel}</p>
+                        <p className="text-sm text-foreground">{rec.rationale}</p>
+                        {rec.sideEffects.length > 0 && (
+                          <div className="flex flex-wrap gap-1 mt-2">
+                            {rec.sideEffects.map((effect, i) => (
+                              <Badge key={i} variant="outline" className="text-xs bg-amber-500/10 text-amber-700 border-amber-500/20">
+                                {effect}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
+                        {rec.contraindicationsDetected.length > 0 && (
+                          <div className="flex flex-wrap gap-1 mt-1">
+                            {rec.contraindicationsDetected.map((contra, i) => (
+                              <Badge key={i} variant="outline" className="text-xs bg-destructive/10 text-destructive border-destructive/20">
+                                {contra}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))
+                  ) : (
+                    <div className="p-4 bg-muted/50 border border-border rounded-lg">
+                      <p className="text-sm text-muted-foreground">No recommendations found for this condition.</p>
                     </div>
-                  ))}
+                  )}
                 </div>
               )}
             </CardContent>
@@ -555,33 +589,45 @@ export default function NexusRxPage() {
                 <div className="mt-4 space-y-3">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Pill className="w-4 h-4" />
-                    <span>OTC alternatives for: {patientResult.requestedSymptoms.join(", ")}</span>
+                    <span>Found {patientResult.matchedCount} OTC alternative(s)</span>
                   </div>
-                  {patientResult.matches.map((match, idx) => (
-                    <div key={idx} className="space-y-2">
-                      <h4 className="text-sm font-medium text-foreground capitalize">{match.symptom}</h4>
-                      {match.otcOptions.map((option, i) => (
-                        <div key={i} className="p-3 bg-muted/50 border border-border rounded-lg space-y-2 ml-2">
-                          <div className="flex items-center justify-between">
-                            <span className="font-medium text-foreground">{option.product}</span>
-                            <Badge variant="outline" className="text-xs">
-                              {option.activeIngredient}
-                            </Badge>
-                          </div>
-                          <p className="text-sm text-muted-foreground">{option.mechanism}</p>
-                          {option.warnings.length > 0 && (
-                            <div className="flex flex-wrap gap-1">
-                              {option.warnings.map((warning, j) => (
-                                <Badge key={j} variant="outline" className="text-xs bg-amber-500/10 text-amber-700 border-amber-500/20">
-                                  {warning}
-                                </Badge>
-                              ))}
-                            </div>
-                          )}
+                  {patientResult.alternatives && patientResult.alternatives.length > 0 ? (
+                    patientResult.alternatives.map((alt, idx) => (
+                      <div key={idx} className="p-3 bg-muted/50 border border-border rounded-lg space-y-2">
+                        <div className="flex items-center justify-between">
+                          <span className="font-medium text-foreground">{alt.option}</span>
+                          <Badge variant="outline" className="text-xs capitalize">
+                            {alt.forSymptom}
+                          </Badge>
                         </div>
-                      ))}
+                        <div className="flex flex-wrap gap-1">
+                          {alt.matchedIngredients.map((ingredient, i) => (
+                            <Badge key={i} variant="secondary" className="text-xs">
+                              {ingredient}
+                            </Badge>
+                          ))}
+                        </div>
+                        <div className="flex flex-wrap gap-1">
+                          {alt.expectedEffects.map((effect, i) => (
+                            <Badge key={i} variant="outline" className="text-xs bg-primary/10 text-primary border-primary/20">
+                              {effect}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="p-4 bg-muted/50 border border-border rounded-lg space-y-2">
+                      <p className="text-sm text-muted-foreground">No direct OTC matches found.</p>
+                      {patientResult.genericPlan && patientResult.genericPlan.length > 0 && (
+                        <ul className="text-sm text-foreground list-disc list-inside">
+                          {patientResult.genericPlan.map((plan, i) => (
+                            <li key={i}>{plan}</li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
-                  ))}
+                  )}
                 </div>
               )}
             </CardContent>

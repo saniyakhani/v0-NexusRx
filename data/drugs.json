@@ -8,16 +8,11 @@
     "sideEffects": ["nausea", "diarrhea", "vitamin B12 deficiency"],
     "contraindications": ["kidney disease", "liver disease", "alcohol abuse"],
     "repurposingSignals": [
-      {
-        "disease": "Fibromyalgia",
-        "signalStrength": 0.45,
-        "reason": "Anti-inflammatory properties may reduce systemic inflammation associated with fibromyalgia"
-      },
-      {
-        "disease": "PCOS",
-        "signalStrength": 0.82,
-        "reason": "Improves insulin resistance commonly seen in PCOS patients"
-      }
+      { "disease": "Fibromyalgia", "signalStrength": 0.45, "reason": "Anti-inflammatory properties may reduce systemic inflammation associated with fibromyalgia" },
+      { "disease": "PCOS", "signalStrength": 0.82, "reason": "Improves insulin resistance commonly seen in PCOS patients" },
+      { "disease": "Obesity", "signalStrength": 0.68, "reason": "Promotes weight loss through appetite suppression and improved glucose metabolism" },
+      { "disease": "Type 2 Diabetes", "signalStrength": 0.95, "reason": "First-line treatment for glycemic control" },
+      { "disease": "Coronary Artery Disease", "signalStrength": 0.52, "reason": "Cardioprotective effects through reduced oxidative stress" }
     ]
   },
   {
@@ -27,18 +22,13 @@
     "frequencyScore": 0.72,
     "effects": ["heart rate reduction", "blood pressure control", "anxiety relief", "tremor reduction"],
     "sideEffects": ["fatigue", "cold extremities", "sleep disturbances"],
-    "contraindications": ["asthma", "bradycardia", "heart block"],
+    "contraindications": ["asthma", "bradycardia", "heart block", "COPD"],
     "repurposingSignals": [
-      {
-        "disease": "Migraine",
-        "signalStrength": 0.78,
-        "reason": "Prevents migraine by stabilizing vascular tone and reducing sympathetic activity"
-      },
-      {
-        "disease": "Essential Tremor",
-        "signalStrength": 0.85,
-        "reason": "Beta-blockade reduces involuntary tremor amplitude"
-      }
+      { "disease": "Migraine", "signalStrength": 0.78, "reason": "Prevents migraine by stabilizing vascular tone and reducing sympathetic activity" },
+      { "disease": "Essential Tremor", "signalStrength": 0.85, "reason": "Beta-blockade reduces involuntary tremor amplitude" },
+      { "disease": "Hypertension", "signalStrength": 0.88, "reason": "Reduces cardiac output and peripheral resistance" },
+      { "disease": "Coronary Artery Disease", "signalStrength": 0.72, "reason": "Reduces myocardial oxygen demand and prevents angina" },
+      { "disease": "Anxiety", "signalStrength": 0.65, "reason": "Blocks physical symptoms of anxiety such as rapid heartbeat" }
     ]
   },
   {
@@ -50,21 +40,11 @@
     "sideEffects": ["drowsiness", "dry mouth", "weight gain", "constipation"],
     "contraindications": ["glaucoma", "urinary retention", "heart arrhythmia"],
     "repurposingSignals": [
-      {
-        "disease": "Fibromyalgia",
-        "signalStrength": 0.75,
-        "reason": "Low-dose tricyclics modulate central pain processing and improve sleep quality"
-      },
-      {
-        "disease": "Neuropathic Pain",
-        "signalStrength": 0.82,
-        "reason": "Blocks reuptake of norepinephrine involved in pain transmission"
-      },
-      {
-        "disease": "Migraine",
-        "signalStrength": 0.68,
-        "reason": "Prophylactic effect through serotonin pathway modulation"
-      }
+      { "disease": "Fibromyalgia", "signalStrength": 0.75, "reason": "Low-dose tricyclics modulate central pain processing and improve sleep quality" },
+      { "disease": "Neuropathic Pain", "signalStrength": 0.82, "reason": "Blocks reuptake of norepinephrine involved in pain transmission" },
+      { "disease": "Migraine", "signalStrength": 0.68, "reason": "Prophylactic effect through serotonin pathway modulation" },
+      { "disease": "Irritable Bowel Syndrome", "signalStrength": 0.55, "reason": "Modulates gut-brain axis signaling" },
+      { "disease": "Chronic Pain", "signalStrength": 0.72, "reason": "Central nervous system pain pathway modulation" }
     ]
   },
   {
@@ -76,21 +56,10 @@
     "sideEffects": ["vivid dreams", "mild headache", "insomnia"],
     "contraindications": ["opioid dependence", "acute hepatitis", "liver failure"],
     "repurposingSignals": [
-      {
-        "disease": "Fibromyalgia",
-        "signalStrength": 0.72,
-        "reason": "Modulates microglial activation and reduces central sensitization"
-      },
-      {
-        "disease": "Multiple Sclerosis",
-        "signalStrength": 0.58,
-        "reason": "Immune-modulating effects may reduce neuroinflammation"
-      },
-      {
-        "disease": "Crohn's Disease",
-        "signalStrength": 0.65,
-        "reason": "Anti-inflammatory action in gut mucosal tissue"
-      }
+      { "disease": "Fibromyalgia", "signalStrength": 0.72, "reason": "Modulates microglial activation and reduces central sensitization" },
+      { "disease": "Multiple Sclerosis", "signalStrength": 0.58, "reason": "Immune-modulating effects may reduce neuroinflammation" },
+      { "disease": "Crohn's Disease", "signalStrength": 0.65, "reason": "Anti-inflammatory action in gut mucosal tissue" },
+      { "disease": "Chronic Fatigue Syndrome", "signalStrength": 0.48, "reason": "May improve immune function and reduce fatigue" }
     ]
   },
   {
@@ -102,21 +71,177 @@
     "sideEffects": ["dizziness", "drowsiness", "peripheral edema"],
     "contraindications": ["kidney disease", "respiratory depression"],
     "repurposingSignals": [
-      {
-        "disease": "Fibromyalgia",
-        "signalStrength": 0.7,
-        "reason": "Reduces hyperexcitability of central nervous system pain pathways"
-      },
-      {
-        "disease": "Restless Leg Syndrome",
-        "signalStrength": 0.75,
-        "reason": "Modulates calcium channels involved in abnormal limb sensations"
-      },
-      {
-        "disease": "Neuroinflammation",
-        "signalStrength": 0.55,
-        "reason": "Indirect anti-inflammatory effects through neural pathway modulation"
-      }
+      { "disease": "Fibromyalgia", "signalStrength": 0.70, "reason": "Reduces hyperexcitability of central nervous system pain pathways" },
+      { "disease": "Restless Leg Syndrome", "signalStrength": 0.75, "reason": "Modulates calcium channels involved in abnormal limb sensations" },
+      { "disease": "Neuropathic Pain", "signalStrength": 0.80, "reason": "Blocks voltage-gated calcium channels in pain pathways" },
+      { "disease": "Anxiety", "signalStrength": 0.55, "reason": "GABAergic effects provide anxiolytic properties" }
+    ]
+  },
+  {
+    "name": "Lisinopril",
+    "class": "ACE Inhibitor",
+    "commonUse": "Hypertension",
+    "frequencyScore": 0.90,
+    "effects": ["blood pressure reduction", "cardiac protection", "kidney protection", "vasodilation"],
+    "sideEffects": ["dry cough", "dizziness", "hyperkalemia", "angioedema"],
+    "contraindications": ["pregnancy", "bilateral renal artery stenosis", "angioedema history"],
+    "repurposingSignals": [
+      { "disease": "Hypertension", "signalStrength": 0.92, "reason": "First-line antihypertensive through renin-angiotensin system blockade" },
+      { "disease": "Heart Failure", "signalStrength": 0.85, "reason": "Reduces afterload and improves cardiac remodeling" },
+      { "disease": "Chronic Kidney Disease", "signalStrength": 0.78, "reason": "Reduces intraglomerular pressure and slows CKD progression" },
+      { "disease": "Coronary Artery Disease", "signalStrength": 0.72, "reason": "Secondary prevention and cardioprotection" },
+      { "disease": "Type 2 Diabetes", "signalStrength": 0.65, "reason": "Nephroprotective in diabetic patients" }
+    ]
+  },
+  {
+    "name": "Atorvastatin",
+    "class": "Statin",
+    "commonUse": "Hyperlipidemia",
+    "frequencyScore": 0.92,
+    "effects": ["cholesterol reduction", "anti-inflammatory", "plaque stabilization", "endothelial function improvement"],
+    "sideEffects": ["muscle pain", "liver enzyme elevation", "digestive issues"],
+    "contraindications": ["liver disease", "pregnancy", "breastfeeding"],
+    "repurposingSignals": [
+      { "disease": "Hyperlipidemia", "signalStrength": 0.95, "reason": "Potent HMG-CoA reductase inhibitor for cholesterol control" },
+      { "disease": "Coronary Artery Disease", "signalStrength": 0.88, "reason": "Reduces cardiovascular events through lipid lowering and plaque stabilization" },
+      { "disease": "Type 2 Diabetes", "signalStrength": 0.72, "reason": "Cardiovascular risk reduction in diabetic patients" },
+      { "disease": "Chronic Kidney Disease", "signalStrength": 0.55, "reason": "May slow progression through anti-inflammatory effects" },
+      { "disease": "Stroke Prevention", "signalStrength": 0.78, "reason": "Reduces ischemic stroke risk through lipid control" }
+    ]
+  },
+  {
+    "name": "Amlodipine",
+    "class": "Calcium Channel Blocker",
+    "commonUse": "Hypertension",
+    "frequencyScore": 0.88,
+    "effects": ["blood pressure reduction", "vasodilation", "antianginal", "smooth muscle relaxation"],
+    "sideEffects": ["peripheral edema", "flushing", "headache", "dizziness"],
+    "contraindications": ["severe aortic stenosis", "cardiogenic shock", "unstable angina"],
+    "repurposingSignals": [
+      { "disease": "Hypertension", "signalStrength": 0.90, "reason": "Long-acting calcium channel blocker for sustained BP control" },
+      { "disease": "Coronary Artery Disease", "signalStrength": 0.75, "reason": "Reduces angina through coronary vasodilation" },
+      { "disease": "Raynaud's Phenomenon", "signalStrength": 0.68, "reason": "Improves peripheral circulation through vasodilation" },
+      { "disease": "Migraine", "signalStrength": 0.45, "reason": "May prevent vascular migraine through calcium channel blockade" }
+    ]
+  },
+  {
+    "name": "Losartan",
+    "class": "Angiotensin Receptor Blocker",
+    "commonUse": "Hypertension",
+    "frequencyScore": 0.85,
+    "effects": ["blood pressure reduction", "kidney protection", "cardiac remodeling prevention", "uric acid reduction"],
+    "sideEffects": ["dizziness", "hyperkalemia", "fatigue"],
+    "contraindications": ["pregnancy", "bilateral renal artery stenosis"],
+    "repurposingSignals": [
+      { "disease": "Hypertension", "signalStrength": 0.88, "reason": "Effective angiotensin II receptor blockade" },
+      { "disease": "Chronic Kidney Disease", "signalStrength": 0.82, "reason": "Nephroprotective through reduced glomerular pressure" },
+      { "disease": "Heart Failure", "signalStrength": 0.75, "reason": "Reduces cardiac workload and improves outcomes" },
+      { "disease": "Gout", "signalStrength": 0.55, "reason": "Unique uricosuric effect among ARBs" },
+      { "disease": "Type 2 Diabetes", "signalStrength": 0.70, "reason": "Kidney protection in diabetic nephropathy" }
+    ]
+  },
+  {
+    "name": "Omeprazole",
+    "class": "Proton Pump Inhibitor",
+    "commonUse": "GERD",
+    "frequencyScore": 0.88,
+    "effects": ["acid suppression", "ulcer healing", "H. pylori eradication support", "esophageal protection"],
+    "sideEffects": ["headache", "diarrhea", "vitamin B12 deficiency", "bone fracture risk"],
+    "contraindications": ["severe liver disease"],
+    "repurposingSignals": [
+      { "disease": "Gastroesophageal Reflux Disease", "signalStrength": 0.95, "reason": "Gold standard for acid suppression in GERD" },
+      { "disease": "Peptic Ulcer Disease", "signalStrength": 0.90, "reason": "Promotes ulcer healing through acid reduction" },
+      { "disease": "H. pylori Infection", "signalStrength": 0.75, "reason": "Component of triple therapy for H. pylori eradication" },
+      { "disease": "Barrett's Esophagus", "signalStrength": 0.72, "reason": "Reduces acid exposure to prevent progression" }
+    ]
+  },
+  {
+    "name": "Montelukast",
+    "class": "Leukotriene Receptor Antagonist",
+    "commonUse": "Asthma",
+    "frequencyScore": 0.75,
+    "effects": ["bronchodilation", "anti-inflammatory", "allergy relief", "mucus reduction"],
+    "sideEffects": ["headache", "abdominal pain", "behavioral changes", "sleep disturbances"],
+    "contraindications": ["phenylketonuria"],
+    "repurposingSignals": [
+      { "disease": "Asthma", "signalStrength": 0.85, "reason": "Blocks leukotriene-mediated bronchoconstriction" },
+      { "disease": "Allergic Rhinitis", "signalStrength": 0.78, "reason": "Reduces nasal inflammation and congestion" },
+      { "disease": "COPD", "signalStrength": 0.48, "reason": "May provide modest benefit as add-on therapy" },
+      { "disease": "Exercise-Induced Bronchospasm", "signalStrength": 0.72, "reason": "Prevents exercise-triggered airway narrowing" }
+    ]
+  },
+  {
+    "name": "Albuterol",
+    "class": "Beta-2 Agonist",
+    "commonUse": "Asthma",
+    "frequencyScore": 0.92,
+    "effects": ["rapid bronchodilation", "airway smooth muscle relaxation", "acute symptom relief"],
+    "sideEffects": ["tremor", "tachycardia", "nervousness", "headache"],
+    "contraindications": ["tachyarrhythmias", "severe cardiac disease"],
+    "repurposingSignals": [
+      { "disease": "Asthma", "signalStrength": 0.95, "reason": "Rescue medication for acute bronchospasm" },
+      { "disease": "COPD", "signalStrength": 0.85, "reason": "Quick relief of airflow obstruction" },
+      { "disease": "Hyperkalemia", "signalStrength": 0.62, "reason": "Shifts potassium intracellularly as emergency treatment" }
+    ]
+  },
+  {
+    "name": "Tiotropium",
+    "class": "Long-Acting Muscarinic Antagonist",
+    "commonUse": "COPD",
+    "frequencyScore": 0.78,
+    "effects": ["prolonged bronchodilation", "mucus reduction", "exacerbation prevention"],
+    "sideEffects": ["dry mouth", "constipation", "urinary retention", "blurred vision"],
+    "contraindications": ["narrow-angle glaucoma", "urinary retention", "prostatic hyperplasia"],
+    "repurposingSignals": [
+      { "disease": "COPD", "signalStrength": 0.92, "reason": "Long-acting maintenance bronchodilator" },
+      { "disease": "Asthma", "signalStrength": 0.72, "reason": "Add-on therapy for poorly controlled asthma" }
+    ]
+  },
+  {
+    "name": "Semaglutide",
+    "class": "GLP-1 Receptor Agonist",
+    "commonUse": "Type 2 Diabetes",
+    "frequencyScore": 0.65,
+    "effects": ["glucose-dependent insulin secretion", "appetite suppression", "weight loss", "cardiovascular protection"],
+    "sideEffects": ["nausea", "vomiting", "diarrhea", "pancreatitis risk"],
+    "contraindications": ["medullary thyroid carcinoma history", "MEN 2 syndrome", "pancreatitis history"],
+    "repurposingSignals": [
+      { "disease": "Type 2 Diabetes", "signalStrength": 0.92, "reason": "Potent glycemic control with cardiovascular benefits" },
+      { "disease": "Obesity", "signalStrength": 0.90, "reason": "Significant weight loss through appetite suppression" },
+      { "disease": "Coronary Artery Disease", "signalStrength": 0.75, "reason": "Reduces major adverse cardiovascular events" },
+      { "disease": "NAFLD", "signalStrength": 0.68, "reason": "Reduces hepatic steatosis through weight loss" },
+      { "disease": "Heart Failure", "signalStrength": 0.55, "reason": "May improve outcomes in HFpEF" }
+    ]
+  },
+  {
+    "name": "Empagliflozin",
+    "class": "SGLT2 Inhibitor",
+    "commonUse": "Type 2 Diabetes",
+    "frequencyScore": 0.72,
+    "effects": ["glucose excretion", "weight loss", "blood pressure reduction", "cardiac protection"],
+    "sideEffects": ["genital infections", "urinary tract infections", "dehydration", "ketoacidosis risk"],
+    "contraindications": ["severe kidney disease", "dialysis", "type 1 diabetes"],
+    "repurposingSignals": [
+      { "disease": "Type 2 Diabetes", "signalStrength": 0.88, "reason": "Insulin-independent glucose lowering" },
+      { "disease": "Heart Failure", "signalStrength": 0.85, "reason": "Reduces hospitalizations and mortality in HF" },
+      { "disease": "Chronic Kidney Disease", "signalStrength": 0.82, "reason": "Slows CKD progression regardless of diabetes" },
+      { "disease": "Coronary Artery Disease", "signalStrength": 0.72, "reason": "Cardiovascular event reduction" },
+      { "disease": "Obesity", "signalStrength": 0.58, "reason": "Modest weight loss through caloric excretion" }
+    ]
+  },
+  {
+    "name": "Azithromycin",
+    "class": "Macrolide Antibiotic",
+    "commonUse": "Bacterial Infections",
+    "frequencyScore": 0.82,
+    "effects": ["antibacterial", "anti-inflammatory", "immunomodulatory"],
+    "sideEffects": ["diarrhea", "nausea", "abdominal pain", "QT prolongation"],
+    "contraindications": ["QT prolongation", "liver disease", "myasthenia gravis"],
+    "repurposingSignals": [
+      { "disease": "Lower Respiratory Infections", "signalStrength": 0.90, "reason": "Effective against common respiratory pathogens" },
+      { "disease": "Chlamydia", "signalStrength": 0.95, "reason": "First-line single-dose treatment" },
+      { "disease": "COPD Exacerbation", "signalStrength": 0.75, "reason": "Treats bacterial triggers and reduces inflammation" },
+      { "disease": "Bronchiectasis", "signalStrength": 0.65, "reason": "Long-term prophylaxis reduces exacerbations" }
     ]
   },
   {
@@ -124,25 +249,139 @@
     "class": "Tetracycline Antibiotic",
     "commonUse": "Bacterial Infections",
     "frequencyScore": 0.68,
-    "effects": ["anti-bacterial", "anti-inflammatory", "matrix metalloproteinase inhibition", "immunomodulatory"],
+    "effects": ["antibacterial", "anti-inflammatory", "matrix metalloproteinase inhibition", "immunomodulatory"],
     "sideEffects": ["photosensitivity", "nausea", "esophageal irritation"],
     "contraindications": ["pregnancy", "children under 8", "liver disease"],
     "repurposingSignals": [
-      {
-        "disease": "Rosacea",
-        "signalStrength": 0.88,
-        "reason": "Anti-inflammatory properties reduce facial redness and papules"
-      },
-      {
-        "disease": "Periodontitis",
-        "signalStrength": 0.72,
-        "reason": "Inhibits collagenase activity in gum tissue"
-      },
-      {
-        "disease": "Neuroinflammation",
-        "signalStrength": 0.48,
-        "reason": "Crosses blood-brain barrier and may reduce microglial activation"
-      }
+      { "disease": "Rosacea", "signalStrength": 0.88, "reason": "Anti-inflammatory properties reduce facial redness and papules" },
+      { "disease": "Chlamydia", "signalStrength": 0.90, "reason": "Alternative first-line treatment" },
+      { "disease": "Periodontitis", "signalStrength": 0.72, "reason": "Inhibits collagenase activity in gum tissue" },
+      { "disease": "Acne", "signalStrength": 0.78, "reason": "Reduces P. acnes and skin inflammation" },
+      { "disease": "Lower Respiratory Infections", "signalStrength": 0.72, "reason": "Covers atypical respiratory pathogens" }
+    ]
+  },
+  {
+    "name": "Liraglutide",
+    "class": "GLP-1 Receptor Agonist",
+    "commonUse": "Type 2 Diabetes",
+    "frequencyScore": 0.68,
+    "effects": ["glucose control", "weight loss", "appetite suppression", "cardiovascular protection"],
+    "sideEffects": ["nausea", "vomiting", "diarrhea", "injection site reactions"],
+    "contraindications": ["medullary thyroid carcinoma", "MEN 2 syndrome", "pancreatitis"],
+    "repurposingSignals": [
+      { "disease": "Type 2 Diabetes", "signalStrength": 0.88, "reason": "Effective glycemic control with weight benefits" },
+      { "disease": "Obesity", "signalStrength": 0.85, "reason": "FDA-approved for weight management" },
+      { "disease": "Coronary Artery Disease", "signalStrength": 0.68, "reason": "Reduces cardiovascular events in high-risk patients" }
+    ]
+  },
+  {
+    "name": "Spironolactone",
+    "class": "Potassium-Sparing Diuretic",
+    "commonUse": "Heart Failure",
+    "frequencyScore": 0.72,
+    "effects": ["aldosterone antagonism", "potassium retention", "diuresis", "anti-androgen"],
+    "sideEffects": ["hyperkalemia", "gynecomastia", "menstrual irregularities"],
+    "contraindications": ["severe kidney disease", "hyperkalemia", "Addison's disease"],
+    "repurposingSignals": [
+      { "disease": "Heart Failure", "signalStrength": 0.88, "reason": "Reduces mortality in systolic heart failure" },
+      { "disease": "Hypertension", "signalStrength": 0.75, "reason": "Effective in resistant hypertension" },
+      { "disease": "PCOS", "signalStrength": 0.72, "reason": "Anti-androgen effects reduce hirsutism and acne" },
+      { "disease": "Acne", "signalStrength": 0.65, "reason": "Hormonal acne treatment through androgen blockade" },
+      { "disease": "Chronic Kidney Disease", "signalStrength": 0.55, "reason": "May provide renal protection" }
+    ]
+  },
+  {
+    "name": "Furosemide",
+    "class": "Loop Diuretic",
+    "commonUse": "Edema",
+    "frequencyScore": 0.85,
+    "effects": ["potent diuresis", "fluid removal", "blood pressure reduction"],
+    "sideEffects": ["electrolyte imbalance", "dehydration", "ototoxicity", "hypotension"],
+    "contraindications": ["anuria", "severe electrolyte depletion", "sulfonamide allergy"],
+    "repurposingSignals": [
+      { "disease": "Heart Failure", "signalStrength": 0.90, "reason": "First-line for fluid overload in acute HF" },
+      { "disease": "Chronic Kidney Disease", "signalStrength": 0.78, "reason": "Manages fluid retention in advanced CKD" },
+      { "disease": "Hypertension", "signalStrength": 0.55, "reason": "Used in resistant hypertension with fluid retention" },
+      { "disease": "Pulmonary Edema", "signalStrength": 0.92, "reason": "Rapid fluid removal in emergency" }
+    ]
+  },
+  {
+    "name": "Prednisone",
+    "class": "Corticosteroid",
+    "commonUse": "Inflammatory Conditions",
+    "frequencyScore": 0.88,
+    "effects": ["anti-inflammatory", "immunosuppression", "antiemetic"],
+    "sideEffects": ["weight gain", "hyperglycemia", "osteoporosis", "mood changes", "immunosuppression"],
+    "contraindications": ["systemic fungal infection", "live vaccines"],
+    "repurposingSignals": [
+      { "disease": "Asthma", "signalStrength": 0.85, "reason": "Acute exacerbation management" },
+      { "disease": "COPD", "signalStrength": 0.78, "reason": "Reduces inflammation during exacerbations" },
+      { "disease": "Inflammatory Bowel Disease", "signalStrength": 0.82, "reason": "Induces remission in flares" },
+      { "disease": "Rheumatoid Arthritis", "signalStrength": 0.75, "reason": "Bridge therapy and flare management" },
+      { "disease": "Allergic Reactions", "signalStrength": 0.88, "reason": "Rapid anti-inflammatory effect" }
+    ]
+  },
+  {
+    "name": "Metoprolol",
+    "class": "Beta Blocker",
+    "commonUse": "Hypertension",
+    "frequencyScore": 0.88,
+    "effects": ["heart rate reduction", "blood pressure control", "cardiac protection"],
+    "sideEffects": ["fatigue", "bradycardia", "cold extremities", "depression"],
+    "contraindications": ["severe bradycardia", "heart block", "cardiogenic shock", "decompensated HF"],
+    "repurposingSignals": [
+      { "disease": "Hypertension", "signalStrength": 0.85, "reason": "Selective beta-1 blockade for BP control" },
+      { "disease": "Heart Failure", "signalStrength": 0.88, "reason": "Reduces mortality in systolic HF" },
+      { "disease": "Coronary Artery Disease", "signalStrength": 0.82, "reason": "Post-MI cardioprotection" },
+      { "disease": "Atrial Fibrillation", "signalStrength": 0.78, "reason": "Rate control" },
+      { "disease": "Migraine", "signalStrength": 0.62, "reason": "Prophylactic efficacy" }
+    ]
+  },
+  {
+    "name": "Fluoxetine",
+    "class": "SSRI",
+    "commonUse": "Depression",
+    "frequencyScore": 0.82,
+    "effects": ["serotonin reuptake inhibition", "mood improvement", "anxiety reduction"],
+    "sideEffects": ["nausea", "insomnia", "sexual dysfunction", "weight changes"],
+    "contraindications": ["MAO inhibitor use", "pimozide use", "thioridazine use"],
+    "repurposingSignals": [
+      { "disease": "Depression", "signalStrength": 0.90, "reason": "First-line antidepressant" },
+      { "disease": "Anxiety", "signalStrength": 0.82, "reason": "Effective for generalized anxiety and panic" },
+      { "disease": "Obesity", "signalStrength": 0.45, "reason": "May cause modest weight loss" },
+      { "disease": "Fibromyalgia", "signalStrength": 0.55, "reason": "Improves mood and may reduce pain perception" },
+      { "disease": "Bulimia Nervosa", "signalStrength": 0.78, "reason": "FDA-approved for bulimia" }
+    ]
+  },
+  {
+    "name": "Duloxetine",
+    "class": "SNRI",
+    "commonUse": "Depression",
+    "frequencyScore": 0.75,
+    "effects": ["serotonin-norepinephrine reuptake inhibition", "pain modulation", "mood improvement"],
+    "sideEffects": ["nausea", "dry mouth", "constipation", "dizziness"],
+    "contraindications": ["MAO inhibitor use", "uncontrolled narrow-angle glaucoma", "severe liver disease"],
+    "repurposingSignals": [
+      { "disease": "Fibromyalgia", "signalStrength": 0.85, "reason": "FDA-approved for fibromyalgia pain" },
+      { "disease": "Neuropathic Pain", "signalStrength": 0.82, "reason": "FDA-approved for diabetic neuropathy" },
+      { "disease": "Depression", "signalStrength": 0.88, "reason": "Effective antidepressant" },
+      { "disease": "Anxiety", "signalStrength": 0.78, "reason": "FDA-approved for GAD" },
+      { "disease": "Chronic Pain", "signalStrength": 0.75, "reason": "Dual mechanism addresses pain and mood" }
+    ]
+  },
+  {
+    "name": "Hydrochlorothiazide",
+    "class": "Thiazide Diuretic",
+    "commonUse": "Hypertension",
+    "frequencyScore": 0.90,
+    "effects": ["diuresis", "blood pressure reduction", "calcium retention"],
+    "sideEffects": ["hypokalemia", "hyperuricemia", "hyperglycemia", "photosensitivity"],
+    "contraindications": ["anuria", "sulfonamide allergy", "severe kidney disease"],
+    "repurposingSignals": [
+      { "disease": "Hypertension", "signalStrength": 0.90, "reason": "First-line thiazide for BP control" },
+      { "disease": "Heart Failure", "signalStrength": 0.65, "reason": "Mild fluid management" },
+      { "disease": "Kidney Stones", "signalStrength": 0.72, "reason": "Reduces calcium excretion, prevents calcium stones" },
+      { "disease": "Osteoporosis", "signalStrength": 0.48, "reason": "May improve bone density through calcium retention" }
     ]
   }
 ]
