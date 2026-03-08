@@ -650,7 +650,168 @@
       { "disease": "Psoriasis", "signalStrength": 0.90, "reason": "First-line systemic therapy for moderate-to-severe psoriasis, reduces skin cell proliferation" },
       { "disease": "Rheumatoid Arthritis", "signalStrength": 0.92, "reason": "Anchor DMARD in RA treatment, slows disease progression" },
       { "disease": "Cystic Fibrosis", "signalStrength": 0.35, "reason": "Investigational use for anti-inflammatory properties in CF lung disease" },
-      { "disease": "Crohn's Disease", "signalStrength": 0.72, "reason": "Maintenance therapy for Crohn's disease remission" }
+      { "disease": "Crohn's Disease", "signalStrength": 0.72, "reason": "Maintenance therapy for Crohn's disease remission" },
+      { "disease": "Cancer", "signalStrength": 0.75, "reason": "Used in various cancer treatments including leukemia and lymphoma" }
+    ]
+  },
+  {
+    "name": "Factor VIII",
+    "class": "Clotting Factor Replacement",
+    "commonUse": "Hemophilia A",
+    "frequencyScore": 0.45,
+    "effects": ["clotting factor replacement", "bleeding prevention", "hemostasis restoration"],
+    "sideEffects": ["inhibitor development", "allergic reactions", "injection site reactions"],
+    "contraindications": ["known hypersensitivity to factor VIII products"],
+    "repurposingSignals": [
+      { "disease": "Hemophilia", "signalStrength": 0.98, "reason": "Essential replacement therapy for Hemophilia A, restores clotting function" }
+    ]
+  },
+  {
+    "name": "Factor IX",
+    "class": "Clotting Factor Replacement",
+    "commonUse": "Hemophilia B",
+    "frequencyScore": 0.42,
+    "effects": ["clotting factor replacement", "bleeding prevention", "coagulation cascade support"],
+    "sideEffects": ["thrombosis risk", "allergic reactions", "inhibitor formation"],
+    "contraindications": ["disseminated intravascular coagulation", "fibrinolysis"],
+    "repurposingSignals": [
+      { "disease": "Hemophilia", "signalStrength": 0.98, "reason": "Essential replacement therapy for Hemophilia B (Christmas disease)" }
+    ]
+  },
+  {
+    "name": "Desmopressin",
+    "class": "Synthetic Vasopressin Analogue",
+    "commonUse": "Diabetes Insipidus/Hemophilia",
+    "frequencyScore": 0.55,
+    "effects": ["von Willebrand factor release", "Factor VIII release", "antidiuretic"],
+    "sideEffects": ["hyponatremia", "headache", "flushing", "water retention"],
+    "contraindications": ["hyponatremia", "moderate to severe renal impairment"],
+    "repurposingSignals": [
+      { "disease": "Hemophilia", "signalStrength": 0.82, "reason": "First-line treatment for mild Hemophilia A, stimulates endogenous factor release" }
+    ]
+  },
+  {
+    "name": "Emicizumab",
+    "class": "Bispecific Monoclonal Antibody",
+    "commonUse": "Hemophilia A",
+    "frequencyScore": 0.38,
+    "effects": ["Factor IXa and Factor X bridging", "thrombin generation", "prophylactic hemostasis"],
+    "sideEffects": ["injection site reactions", "headache", "thrombotic microangiopathy"],
+    "contraindications": ["concurrent aPCC use at high doses"],
+    "repurposingSignals": [
+      { "disease": "Hemophilia", "signalStrength": 0.95, "reason": "Revolutionary prophylaxis for Hemophilia A with or without inhibitors, subcutaneous administration" }
+    ]
+  },
+  {
+    "name": "Insulin",
+    "class": "Hormone Replacement",
+    "commonUse": "Diabetes",
+    "frequencyScore": 0.95,
+    "effects": ["glucose uptake facilitation", "glycemic control", "anabolic hormone"],
+    "sideEffects": ["hypoglycemia", "weight gain", "injection site reactions", "lipodystrophy"],
+    "contraindications": ["hypoglycemia"],
+    "repurposingSignals": [
+      { "disease": "Diabetes", "signalStrength": 0.98, "reason": "Essential for Type 1 diabetes and advanced Type 2 diabetes, provides physiologic glucose control" },
+      { "disease": "Kidney Disease", "signalStrength": 0.75, "reason": "Preferred agent for diabetic nephropathy, requires dose adjustment in CKD" }
+    ]
+  },
+  {
+    "name": "Ursodeoxycholic Acid",
+    "class": "Bile Acid",
+    "commonUse": "Cholestatic Liver Disease",
+    "frequencyScore": 0.52,
+    "effects": ["bile flow improvement", "hepatoprotection", "cholesterol solubilization"],
+    "sideEffects": ["diarrhea", "pruritus", "hair thinning"],
+    "contraindications": ["complete biliary obstruction", "calcified gallstones"],
+    "repurposingSignals": [
+      { "disease": "Liver Disease", "signalStrength": 0.92, "reason": "First-line treatment for primary biliary cholangitis, improves liver biochemistry" },
+      { "disease": "Jaundice", "signalStrength": 0.85, "reason": "Reduces cholestatic jaundice by improving bile flow and reducing toxic bile acids" }
+    ]
+  },
+  {
+    "name": "Lactulose",
+    "class": "Osmotic Laxative/Ammonia Reducer",
+    "commonUse": "Hepatic Encephalopathy",
+    "frequencyScore": 0.68,
+    "effects": ["ammonia trapping", "colonic acidification", "bacterial ammonia reduction"],
+    "sideEffects": ["bloating", "flatulence", "diarrhea", "electrolyte imbalances"],
+    "contraindications": ["galactosemia", "intestinal obstruction"],
+    "repurposingSignals": [
+      { "disease": "Liver Disease", "signalStrength": 0.95, "reason": "First-line treatment for hepatic encephalopathy, reduces blood ammonia levels" },
+      { "disease": "Jaundice", "signalStrength": 0.55, "reason": "Helpful in hepatic jaundice with encephalopathy component" }
+    ]
+  },
+  {
+    "name": "Rifaximin",
+    "class": "Non-systemic Antibiotic",
+    "commonUse": "Hepatic Encephalopathy/IBS-D",
+    "frequencyScore": 0.55,
+    "effects": ["gut bacteria modulation", "ammonia production reduction", "minimal systemic absorption"],
+    "sideEffects": ["nausea", "dizziness", "fatigue"],
+    "contraindications": ["hypersensitivity to rifamycins"],
+    "repurposingSignals": [
+      { "disease": "Liver Disease", "signalStrength": 0.88, "reason": "Adjunct to lactulose for hepatic encephalopathy prevention, reduces recurrence" },
+      { "disease": "Jaundice", "signalStrength": 0.45, "reason": "May help in hepatic jaundice with bacterial overgrowth component" }
+    ]
+  },
+  {
+    "name": "Inmazeb",
+    "class": "Monoclonal Antibody Combination",
+    "commonUse": "Ebola Virus Disease",
+    "frequencyScore": 0.15,
+    "effects": ["viral glycoprotein neutralization", "cell entry blockade", "immune enhancement"],
+    "sideEffects": ["fever", "chills", "tachycardia", "hypotension"],
+    "contraindications": ["none absolute, benefit outweighs risk in Ebola"],
+    "repurposingSignals": [
+      { "disease": "Ebola", "signalStrength": 0.95, "reason": "FDA-approved treatment for Ebola, significantly reduces mortality when given early" }
+    ]
+  },
+  {
+    "name": "Ebanga",
+    "class": "Monoclonal Antibody",
+    "commonUse": "Ebola Virus Disease",
+    "frequencyScore": 0.12,
+    "effects": ["viral neutralization", "glycoprotein binding", "infection prevention"],
+    "sideEffects": ["hypersensitivity reactions", "fever", "chills"],
+    "contraindications": ["none absolute in Ebola infection"],
+    "repurposingSignals": [
+      { "disease": "Ebola", "signalStrength": 0.92, "reason": "FDA-approved single antibody treatment for Ebola virus infection" }
+    ]
+  },
+  {
+    "name": "Doxorubicin",
+    "class": "Anthracycline Chemotherapy",
+    "commonUse": "Cancer",
+    "frequencyScore": 0.55,
+    "effects": ["DNA intercalation", "topoisomerase II inhibition", "free radical generation"],
+    "sideEffects": ["cardiotoxicity", "myelosuppression", "alopecia", "nausea/vomiting"],
+    "contraindications": ["severe heart disease", "severe myelosuppression", "pregnancy"],
+    "repurposingSignals": [
+      { "disease": "Cancer", "signalStrength": 0.92, "reason": "Broad-spectrum chemotherapy for breast cancer, lymphomas, sarcomas, and many solid tumors" }
+    ]
+  },
+  {
+    "name": "Cisplatin",
+    "class": "Platinum-based Chemotherapy",
+    "commonUse": "Cancer",
+    "frequencyScore": 0.58,
+    "effects": ["DNA crosslinking", "apoptosis induction", "cell cycle arrest"],
+    "sideEffects": ["nephrotoxicity", "ototoxicity", "severe nausea", "neurotoxicity"],
+    "contraindications": ["severe renal impairment", "hearing impairment", "myelosuppression"],
+    "repurposingSignals": [
+      { "disease": "Cancer", "signalStrength": 0.95, "reason": "Cornerstone of treatment for testicular, ovarian, bladder, and lung cancers" }
+    ]
+  },
+  {
+    "name": "Paclitaxel",
+    "class": "Taxane Chemotherapy",
+    "commonUse": "Cancer",
+    "frequencyScore": 0.62,
+    "effects": ["microtubule stabilization", "mitotic arrest", "apoptosis induction"],
+    "sideEffects": ["peripheral neuropathy", "myelosuppression", "alopecia", "hypersensitivity"],
+    "contraindications": ["severe neutropenia", "hypersensitivity to polyoxyethylated castor oil"],
+    "repurposingSignals": [
+      { "disease": "Cancer", "signalStrength": 0.95, "reason": "Essential treatment for breast, ovarian, lung, and pancreatic cancers" }
     ]
   }
 ]
